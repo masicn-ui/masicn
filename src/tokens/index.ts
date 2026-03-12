@@ -1,0 +1,69 @@
+// File: src/tokens/index.ts
+
+import { spacing } from './spacing';
+import { radius } from './radius';
+import { borders } from './borders';
+import { sizes } from './sizes';
+import { elevation } from './elevation';
+import { opacity } from './opacity';
+import { iconSizes } from './iconSizes';
+import { layout } from './layout';
+import { motion } from '../animation/motion';
+
+export const MasiTokens = {
+    spacing,
+    radius,
+    borders,
+    sizes,
+    elevation,
+    opacity,
+    iconSizes,
+    layout,
+    motion,
+};
+
+export function useTokens() {
+    return MasiTokens;
+}
+
+// ─── Individual token exports ─────────────────────────────────────────────────
+
+export { palette } from './colors';
+export type { Palette } from './colors';
+
+export { spacing } from './spacing';
+export type { Spacing } from './spacing';
+
+export { sizes } from './sizes';
+export type { Sizes } from './sizes';
+
+export { borders } from './borders';
+export type { Borders } from './borders';
+
+export { radius } from './radius';
+export type { Radius } from './radius';
+
+export { typography, fonts, fontFamilies } from './typography';
+export type {
+    Typography,
+    TypographyVariant,
+    FontRole,
+    FontWeightKey,
+} from './typography';
+
+export { elevation } from './elevation';
+export type { Elevation } from './elevation';
+
+export { motion, motionEasing } from '../animation/motion';
+export type { Motion, MotionEasing } from '../animation/motion';
+
+export { rgba } from '../utils/color';
+
+export { layout } from './layout';
+export type { Layout } from './layout';
+
+export { opacity } from './opacity';
+export type { Opacity } from './opacity';
+
+export { iconSizes } from './iconSizes';
+export type { IconSizes } from './iconSizes';
