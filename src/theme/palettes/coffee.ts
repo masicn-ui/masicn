@@ -1,3 +1,5 @@
+// File: src/theme/palettes/coffee.ts
+
 import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
 

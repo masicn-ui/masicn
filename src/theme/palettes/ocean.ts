@@ -1,3 +1,5 @@
+// File: src/theme/palettes/ocean.ts
+
 import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
 
