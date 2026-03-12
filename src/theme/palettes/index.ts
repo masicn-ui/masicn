@@ -1,7 +1,12 @@
 // File: src/theme/palettes/index.ts
 
-export { mashiPalette } from './mashi';
+export { masiPalette } from './masi';
 export { oceanPalette } from './ocean';
 export { sunsetPalette } from './sunset';
 export { forestPalette } from './forest';
 export { monoPalette } from './mono';
+export { rosePalette } from './rose';
+export { midnightPalette } from './midnight';
+export { amberPalette } from './amber';
+export { nordPalette } from './nord';
+export { coffeePalette } from './coffee';

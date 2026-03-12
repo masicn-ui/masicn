@@ -15,7 +15,18 @@ export {
 export type { Theme, ThemeMode, ThemePair } from './theme';
 
 // ─── Palettes ─────────────────────────────────────
-export { mashiPalette, oceanPalette, sunsetPalette, forestPalette, monoPalette } from './theme/palettes';
+export {
+  masiPalette,
+  oceanPalette,
+  sunsetPalette,
+  forestPalette,
+  monoPalette,
+  rosePalette,
+  midnightPalette,
+  amberPalette,
+  nordPalette,
+  coffeePalette,
+} from './theme/palettes';
 
 // ─── Tokens ───────────────────────────────────────
 export {

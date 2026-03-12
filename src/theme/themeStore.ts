@@ -36,7 +36,7 @@ export const useThemeStore = create<ThemeState>()(
       },
     }),
     {
-      name: 'mashi-ui-theme', // AsyncStorage key
+      name: 'masi-ui-theme', // AsyncStorage key
       storage: createJSONStorage(() => AsyncStorage),
     },
   ),
