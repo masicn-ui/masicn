@@ -12,21 +12,8 @@ export {
   lightTheme,
   darkTheme,
 } from './theme';
-export type { Theme, ThemeMode, ThemePair } from './theme';
 
-// ─── Palettes ─────────────────────────────────────
-export {
-  masiPalette,
-  oceanPalette,
-  sunsetPalette,
-  forestPalette,
-  monoPalette,
-  rosePalette,
-  midnightPalette,
-  amberPalette,
-  nordPalette,
-  coffeePalette,
-} from './theme/palettes';
+export type { Theme, ThemeMode, ThemePair } from './theme';
 
 // ─── Tokens ───────────────────────────────────────
 export {
@@ -44,10 +31,12 @@ export {
   fontFamilies,
   MasiTokens,
 } from './tokens';
+
 export type { Spacing, Radius, Borders, Elevation, Layout, Opacity, IconSizes, Typography, TypographyVariant } from './tokens';
 
 // ─── Animation ────────────────────────────────────
 export { motion, motionEasing } from './animation';
+
 export type { Motion, MotionEasing } from './animation';
 
 // ─── Primitives ───────────────────────────────────
@@ -61,6 +50,7 @@ export {
   useResponsive,
   useTokens,
 } from './hooks';
+
 export type { Breakpoint, ResponsiveInfo } from './hooks';
 
 // ─── Utils ────────────────────────────────────────
