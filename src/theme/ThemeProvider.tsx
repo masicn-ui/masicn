@@ -1,52 +1,35 @@
-// File: src/theme/ThemeProvider.tsx
+// File: src/masicn/theme/ThemeProvider.tsx
+// In-memory ThemeProvider for the Playground — no persistence.
 
-// Zustand-backed ThemeProvider — persists theme preference to AsyncStorage.
-
-import React, { useMemo } from 'react';
-import { ThemeContext, type ThemeContextValue } from './ThemeContext';
-import { useThemeStore, useResolvedTheme, type ThemeMode } from './themeStore';
+import React, { useMemo, useState, useCallback } from 'react';
+import { useColorScheme } from 'react-native';
+import { ThemeContext, type ThemeContextValue, type ThemeMode } from './ThemeContext';
+import { lightTheme } from './light';
+import { darkTheme } from './dark';
 import type { ThemePair } from './createTheme';
 
 interface ThemeProviderProps {
     children: React.ReactNode;
-    /** Initial theme mode. Defaults to 'system'. */
     theme?: ThemeMode;
     /** Custom theme pair from createTheme(). Overrides built-in light/dark themes. */
     themes?: ThemePair;
 }
 
-/**
- * ThemeProvider — Zustand-backed, persists theme preference to AsyncStorage.
- *
- * Use this at the root of your app (already included inside MasicnProvider).
- * Theme preference survives app restarts.
- *
- * @param theme - Optional initial mode ('light' | 'dark' | 'system'). Defaults to 'system'.
- * @param themes - Optional custom theme pair from createTheme(). Overrides built-in themes.
- */
 export function ThemeProvider({ children, theme: initialTheme = 'system', themes }: ThemeProviderProps) {
-    const mode = useThemeStore(state => state.mode);
-    const setMode = useThemeStore(state => state.setMode);
-    const toggleTheme = useThemeStore(state => state.toggleTheme);
-    const resolvedTheme = useResolvedTheme();
+    const systemScheme = useColorScheme();
+    const [mode, setMode] = useState<ThemeMode>(initialTheme);
 
-    const initializedRef = React.useRef(false);
-    React.useEffect(() => {
-        if (!initializedRef.current) {
-            initializedRef.current = true;
-            if (initialTheme && mode !== initialTheme) {
-                setMode(initialTheme);
-            }
-        }
-    }, [initialTheme, mode, setMode]);
+    const toggleTheme = useCallback(() => {
+        setMode(prev => (prev === 'dark' ? 'light' : 'dark'));
+    }, []);
 
-    const theme = themes
-        ? (resolvedTheme.dark ? themes.dark : themes.light)
-        : resolvedTheme;
+    const resolvedDark = mode === 'system' ? systemScheme === 'dark' : mode === 'dark';
+    const base = resolvedDark ? darkTheme : lightTheme;
+    const theme = themes ? (resolvedDark ? themes.dark : themes.light) : base;
 
     const value = useMemo<ThemeContextValue>(
         () => ({ theme, mode, setMode, toggleTheme }),
-        [theme, mode, setMode, toggleTheme],
+        [theme, mode, toggleTheme],
     );
 
     return (

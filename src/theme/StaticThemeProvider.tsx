@@ -47,8 +47,8 @@ export function StaticThemeProvider({ theme, children }: StaticThemeProviderProp
         () => ({
             theme,
             mode: theme.dark ? 'dark' : 'light',
-            setMode: () => {},
-            toggleTheme: () => {},
+            setMode: () => { },
+            toggleTheme: () => { },
         }),
         [theme],
     );
