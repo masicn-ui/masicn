@@ -3,10 +3,8 @@
 export { ThemeProvider } from './ThemeProvider';
 export { StaticThemeProvider } from './StaticThemeProvider';
 export { useTheme } from './ThemeContext';
-export type { ThemeContextValue } from './ThemeContext';
+export type { ThemeContextValue, ThemeMode } from './ThemeContext';
 
-export { useThemeStore, useResolvedTheme, configureThemeStorage } from './themeStore';
-export type { ThemeMode } from './themeStore';
 
 export { createTheme } from './createTheme';
 export type { ThemePair } from './createTheme';
