@@ -1,10 +1,10 @@
-// File: src/theme/ThemeContext.tsx
-
+// File: src/masicn/theme/ThemeContext.tsx
 // Shared theme context and hook — consumed by both ThemeProvider and StaticThemeProvider.
 
 import { createContext, useContext } from 'react';
 import type { Theme } from './theme';
-import type { ThemeMode } from './themeStore';
+
+export type ThemeMode = 'light' | 'dark' | 'system';
 
 export interface ThemeContextValue {
     theme: Theme;
