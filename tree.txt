@@ -5,7 +5,8 @@
 ├── src
 │   ├── animation
 │   │   ├── index.ts
-│   │   └── motion.ts
+│   │   ├── motion.ts
+│   │   └── motionEasing.ts
 │   ├── hooks
 │   │   ├── index.ts
 │   │   ├── useAccessibilityProps.ts
@@ -49,8 +50,7 @@
 │   │   ├── StaticThemeProvider.tsx
 │   │   ├── theme.ts
 │   │   ├── ThemeContext.tsx
-│   │   ├── ThemeProvider.tsx
-│   │   └── themeStore.ts
+│   │   └── ThemeProvider.tsx
 │   ├── tokens
 │   │   ├── borders.ts
 │   │   ├── colors.ts
