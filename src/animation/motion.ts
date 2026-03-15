@@ -1,13 +1,12 @@
 // File: src/animation/motion.ts
 
 import { Easing } from 'react-native';
-import { Easing as ReanimatedEasing } from 'react-native-reanimated';
 
 /**
  * Motion tokens — ensures consistent animation timing across the app.
  * Works with Reanimated, Animated, LayoutAnimation, and gesture transitions.
  *
- * For Reanimated-specific easing, import from `motionEasing` instead.
+ * For Reanimated-specific easing, import from './motionEasing' instead.
  */
 
 export const motion = {
@@ -81,29 +80,3 @@ export const motion = {
 } as const;
 
 export type Motion = typeof motion;
-
-
-/**
- * Reanimated-specific easing functions, isolated from motion.ts so that
- * environments without react-native-reanimated don't crash on import.
- *
- * Use these with withTiming() / runWithTiming() in Reanimated animations:
- * ```ts
- * withTiming(1, { duration: motion.duration.normal, easing: motionEasing.standard })
- * ```
- */
-export const motionEasing = {
-    /** Smooth in-out — default for most UI transitions */
-    standard: ReanimatedEasing.inOut(ReanimatedEasing.ease),
-
-    /** Starts slow, accelerates — use for elements leaving the screen */
-    accelerate: ReanimatedEasing.in(ReanimatedEasing.ease),
-
-    /** Starts fast, decelerates — use for elements entering the screen */
-    decelerate: ReanimatedEasing.out(ReanimatedEasing.ease),
-
-    /** Constant rate — use for progress indicators, loaders */
-    linear: ReanimatedEasing.linear,
-} as const;
-
-export type MotionEasing = typeof motionEasing;

@@ -54,8 +54,11 @@ export type {
 export { elevation } from './elevation';
 export type { Elevation } from './elevation';
 
-export { motion, motionEasing } from '../animation/motion';
-export type { Motion, MotionEasing } from '../animation/motion';
+export { motion } from '../animation/motion';
+export type { Motion } from '../animation/motion';
+
+export { motionEasing } from '../animation/motionEasing';
+export type { MotionEasing } from '../animation/motionEasing';
 
 export { rgba } from '../utils/color';
 
