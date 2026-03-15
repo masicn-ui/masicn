@@ -40,7 +40,25 @@ export { motion, motionEasing } from './animation';
 export type { Motion, MotionEasing } from './animation';
 
 // ─── Primitives ───────────────────────────────────
-export { Box, Text, Stack, Row, Spacer, Divider, Screen, SafeAreaScreen } from './primitives';
+export {
+  Box,
+  Text,
+  Stack,
+  Row,
+  Wrap,
+  Center,
+  Spacer,
+  Divider,
+  Surface,
+  AspectRatio,
+  Circle,
+  Square,
+  Pressable,
+  Screen,
+  SafeAreaScreen,
+} from './primitives';
+
+export type { PressableProps, SurfaceProps, CenterProps, WrapProps, AspectRatioProps, CircleProps, SquareProps } from './primitives';
 
 // ─── Hooks ────────────────────────────────────────
 export {
