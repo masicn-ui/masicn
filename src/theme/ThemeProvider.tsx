@@ -1,5 +1,4 @@
-// File: src/masicn/theme/ThemeProvider.tsx
-// In-memory ThemeProvider for the Playground — no persistence.
+// File: src/theme/ThemeProvider.tsx
 
 import React, { useMemo, useState, useCallback } from 'react';
 import { useColorScheme } from 'react-native';
