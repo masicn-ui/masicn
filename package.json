@@ -1,6 +1,6 @@
 {
   "name": "@masicn/ui",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Core framework for masicn — tokens, theme, primitives, hooks",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
