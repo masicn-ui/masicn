@@ -1,3 +1,5 @@
+// File: src/WelcomeScreen.tsx
+
 // Copied to your project by `masicn init`. Feel free to edit or delete.
 
 import React from 'react';
