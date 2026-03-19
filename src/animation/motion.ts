@@ -9,11 +9,17 @@ import { Easing } from 'react-native';
 
 export const motion = {
     duration: {
+        /** `0ms` — No animation. Use for reduced-motion preferences. */
         instant: 0,
+        /** `120ms` — Micro-interactions. Ripple, toggle, icon swap. */
         fast: 120,
+        /** `200ms` — Standard UI transition. The default. */
         normal: 200,
+        /** `300ms` — Modal / sheet entrance, page-level transitions. */
         slow: 300,
+        /** `500ms` — Complex layout shifts, multi-step animations. */
         slower: 500,
+        /** `700ms` — Hero animations, dramatic reveals, onboarding. */
         dramatic: 700,
     },
 
@@ -22,9 +28,13 @@ export const motion = {
      * Use `motionEasing` from motionEasing.ts for Reanimated withTiming().
      */
     easing: {
+        /** Smooth in-out — default for most UI transitions. */
         standard: Easing.inOut(Easing.ease),
+        /** Starts slow, accelerates — use for elements leaving the screen. */
         accelerate: Easing.in(Easing.ease),
+        /** Starts fast, decelerates — use for elements entering the screen. */
         decelerate: Easing.out(Easing.ease),
+        /** Constant rate — use for progress indicators, loaders. */
         linear: Easing.linear,
     },
 

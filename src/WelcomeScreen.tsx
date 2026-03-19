@@ -232,6 +232,20 @@ function Footer() {
 
 // ── Screen ────────────────────────────────────────────────────────────────────
 
+/**
+ * MasicnWelcomeScreen — built-in onboarding / showcase screen for the design system.
+ *
+ * Renders a scrollable overview of masicn features: hero section, feature list,
+ * CLI quick-start terminal, primitives chip grid, and a live palette swatch preview
+ * using the app's active light and dark themes.
+ *
+ * Drop this into your root navigator during development to verify that the design
+ * system is wired up correctly (themes, fonts, tokens, primitives all visible at once).
+ *
+ * @example
+ * // In your navigator:
+ * <Stack.Screen name="Welcome" component={MasicnWelcomeScreen} />
+ */
 export function MasicnWelcomeScreen() {
   const { theme } = useTheme();
   return (

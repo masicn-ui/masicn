@@ -2,8 +2,9 @@ import React from 'react';
 import { View, type ViewProps, type ColorValue } from 'react-native';
 
 export interface CircleProps extends ViewProps {
-  /** Diameter in points */
+  /** Diameter (width and height) in points. */
   size: number;
+  /** Fill color of the circle. Accepts any React Native `ColorValue`. */
   backgroundColor?: ColorValue;
 }
 

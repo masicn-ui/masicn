@@ -6,6 +6,7 @@ import { ViewStyle } from 'react-native';
  */
 
 export const elevation = {
+  /** Flat — no shadow. Use on default surfaces with no perceived depth. */
   none: {
     shadowOpacity: 0,
     shadowRadius: 0,
@@ -13,6 +14,7 @@ export const elevation = {
     elevation: 0,
   } satisfies ViewStyle,
 
+  /** Subtle lift. Cards at rest, list items. */
   sm: {
     shadowOpacity: 0.08,
     shadowRadius: 4,
@@ -20,6 +22,7 @@ export const elevation = {
     elevation: 2,
   } satisfies ViewStyle,
 
+  /** Gentle depth. Menus, dropdowns, hover states. */
   md: {
     shadowOpacity: 0.12,
     shadowRadius: 8,
@@ -27,6 +30,7 @@ export const elevation = {
     elevation: 4,
   } satisfies ViewStyle,
 
+  /** Clear elevation. Modals, sheets, focused cards. */
   lg: {
     shadowOpacity: 0.15,
     shadowRadius: 12,
@@ -34,6 +38,7 @@ export const elevation = {
     elevation: 6,
   } satisfies ViewStyle,
 
+  /** High elevation. Toasts, floating overlays, FABs. */
   xl: {
     shadowOpacity: 0.2,
     shadowRadius: 16,

@@ -1,15 +1,30 @@
 import { useMemo } from 'react';
 import type { AccessibilityRole, AccessibilityState } from 'react-native';
 
+/** Declarative config passed to `useAccessibilityProps`. */
 interface AccessibilityConfig {
+  /** ARIA-equivalent role for assistive technologies. */
   role?: AccessibilityRole;
+  /** Human-readable label read aloud by VoiceOver / TalkBack. */
   label?: string;
+  /** Additional hint read after the label, e.g. "Double-tap to activate". */
   hint?: string;
+  /** Dynamic state flags — disabled, selected, checked, busy, expanded. */
   state?: AccessibilityState;
+  /**
+   * Live region announcement policy.
+   * - `'polite'` — announces after the current speech finishes.
+   * - `'assertive'` — interrupts current speech immediately.
+   */
   liveRegion?: 'none' | 'polite' | 'assertive';
+  /**
+   * When `true`, marks this view as a modal so screen readers cannot
+   * navigate to elements behind it. Pair with a focus trap.
+   */
   modal?: boolean;
 }
 
+/** The spread-ready prop object returned by `useAccessibilityProps`. */
 interface AccessibilityProps {
   accessibilityRole?: AccessibilityRole;
   accessibilityLabel?: string;
@@ -22,8 +37,8 @@ interface AccessibilityProps {
 
 /**
  * Builds a spread-ready set of accessibility props from a declarative config.
+ * Only defined fields are included in the returned object.
  *
- * Usage:
  * ```tsx
  * const a11y = useAccessibilityProps({
  *   role: 'button',

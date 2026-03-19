@@ -1,3 +1,17 @@
+/**
+ * Masicn — renders children into the global portal layer managed by `MasicnProvider`.
+ *
+ * Use this to escape stacking contexts and render overlays (modals, toasts, tooltips)
+ * at the top of the component tree, regardless of where `Masicn` is placed in the JSX.
+ *
+ * Must be a descendant of `MasicnProvider`.
+ *
+ * ```tsx
+ * <Masicn>
+ *   <Toast message="Saved!" />
+ * </Masicn>
+ * ```
+ */
 import React from 'react';
 import { MasicnContext } from './MasicnProvider';
 

@@ -1,7 +1,11 @@
+/**
+ * Coffee palette — espresso browns, warm cream, and caramel accents.
+ * Light: deep roasted-brown primaries on a latte-cream background.
+ * Dark: true espresso surfaces with caramel highlight text.
+ * Ideal for lifestyle, food, and warm editorial apps.
+ */
 import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
-
-// Coffee palette: espresso browns, warm cream, caramel accents
 
 const lightCoffee: Theme = {
     dark: false,

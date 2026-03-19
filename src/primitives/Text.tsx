@@ -1,3 +1,15 @@
+/**
+ * Text — theme-aware typography primitive.
+ *
+ * Renders an RN `Text` with a typography scale variant, a theme color, and
+ * optional modifiers (bold, italic, underline, alignment). Bold automatically
+ * resolves the correct bold variant for the current font family.
+ *
+ * ```tsx
+ * <Text variant="h2" color="textPrimary" bold>Hello</Text>
+ * <Text variant="caption" color="textSecondary">Updated 2 hours ago</Text>
+ * ```
+ */
 import React from 'react';
 import {
   Text as RNText,
@@ -11,11 +23,17 @@ import { typography, fontFamilies, type Typography } from '../tokens';
 type TextColor = keyof Theme['colors'];
 
 interface TextProps extends RNTextProps {
+  /** Typography scale variant. Defaults to `'body'`. */
   variant?: keyof Typography;
+  /** Theme color key for the text. Defaults to `'textPrimary'`. */
   color?: TextColor;
+  /** Text alignment. */
   align?: 'left' | 'center' | 'right' | 'justify';
+  /** Switches to the bold variant of the current font family. */
   bold?: boolean;
+  /** Applies italic font style. */
   italic?: boolean;
+  /** Applies underline text decoration. */
   underline?: boolean;
 }
 

@@ -1,3 +1,9 @@
+/**
+ * Sunset palette — warm burnt orange and deep violet contrast.
+ * Light: terracotta-orange primaries on a warm cream background with purple secondary.
+ * Dark: near-black purple-tinted surfaces with coral-orange and lavender accents.
+ * Vibrant and bold — great for entertainment, social, and creative apps.
+ */
 import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
 

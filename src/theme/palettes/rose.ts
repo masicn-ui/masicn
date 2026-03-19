@@ -1,3 +1,9 @@
+/**
+ * Rose palette — romantic deep roses and blush pinks.
+ * Light: crimson-rose primaries on a soft blush-white background with hot-pink accents.
+ * Dark: deep burgundy surfaces with petal-pink text and magenta highlights.
+ * Perfect for beauty, lifestyle, dating, and fashion-forward apps.
+ */
 import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
 

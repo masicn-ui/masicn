@@ -1,3 +1,16 @@
+/**
+ * ThemeProvider — dynamic light/dark/system theme with React state.
+ *
+ * Reads the OS color scheme via `useColorScheme` and exposes `setMode` /
+ * `toggleTheme` for in-app overrides. Wrap your root component with this
+ * (or use `MasicnProvider` which includes it automatically).
+ *
+ * ```tsx
+ * <ThemeProvider theme="system">
+ *   <App />
+ * </ThemeProvider>
+ * ```
+ */
 import React, { useMemo, useState, useCallback } from 'react';
 import { useColorScheme } from 'react-native';
 import { ThemeContext, type ThemeContextValue, type ThemeMode } from './ThemeContext';
@@ -7,8 +20,9 @@ import type { ThemePair } from './createTheme';
 
 interface ThemeProviderProps {
     children: React.ReactNode;
+    /** Starting theme mode. Defaults to `'system'`. */
     theme?: ThemeMode;
-    /** Custom theme pair from createTheme(). Overrides built-in light/dark themes. */
+    /** Custom theme pair from `createTheme()`. Overrides built-in light/dark themes. */
     themes?: ThemePair;
 }
 

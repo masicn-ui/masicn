@@ -1,12 +1,25 @@
+/**
+ * Divider — a hairline separator between sections or list items.
+ *
+ * Uses `theme.colors.separator` automatically.
+ * Supports horizontal (default) and vertical orientations,
+ * plus an optional inset margin for list-style layouts.
+ *
+ * ```tsx
+ * <Divider />                   // full-width horizontal line
+ * <Divider inset />             // indented (matches list padding)
+ * <Divider vertical />          // stretch-height vertical rule
+ * ```
+ */
 import React from 'react';
 import { View, StyleSheet, type ViewProps } from 'react-native';
 import { useTheme } from '../theme';
 import { spacing } from '../tokens';
 
 interface DividerProps extends ViewProps {
-  /** Horizontal margin on both sides */
+  /** Adds horizontal margin on both sides — use inside list rows to match content padding. */
   inset?: boolean;
-  /** Vertical spacing above and below */
+  /** Renders a vertical rule instead of a horizontal line. Stretches to parent height. */
   vertical?: boolean;
 }
 

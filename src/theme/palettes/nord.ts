@@ -1,7 +1,12 @@
+/**
+ * Nord palette — arctic blue-grays, cool whites, and frost accents.
+ * Based on the popular Nord color scheme (nordtheme.com).
+ * Light: dark slate-blue primaries on an icy Polar Night–inspired canvas.
+ * Dark: true Nord dark Polar Night surfaces with Snow Storm text.
+ * Excellent for developer tools, code editors, and cool-toned productivity apps.
+ */
 import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
-
-// Nord palette: arctic blue-grays, cool whites, frost accents
 
 const lightNord: Theme = {
     dark: false,
