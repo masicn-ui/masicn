@@ -1,7 +1,3 @@
-// File: src/WelcomeScreen.tsx
-
-// Copied to your project by `masicn init`. Feel free to edit or delete.
-
 import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 import { useTheme, spacing, radius, borders } from '.';

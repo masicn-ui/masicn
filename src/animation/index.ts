@@ -1,5 +1,3 @@
-// File: src/animation/index.ts
-
 export { motion } from './motion';
 export type { Motion } from './motion';
 

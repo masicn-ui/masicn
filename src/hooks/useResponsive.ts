@@ -1,5 +1,3 @@
-// File: src/hooks/useResponsive.ts
-
 import { useWindowDimensions } from 'react-native';
 import { layout } from '../tokens';
 

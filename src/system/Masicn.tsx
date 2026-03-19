@@ -1,5 +1,3 @@
-// File: src/system/Masicn.tsx
-
 import React from 'react';
 import { MasicnContext } from './MasicnProvider';
 

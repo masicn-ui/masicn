@@ -1,5 +1,3 @@
-// File: src/hooks/index.ts
-
 export { useAccessibilityProps } from './useAccessibilityProps';
 export { useFocusTrap } from './useFocusTrap';
 export { useReducedMotion } from './useReducedMotion';

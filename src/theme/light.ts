@@ -1,5 +1,3 @@
-// File: src/theme/light.ts
-
 import { palette } from '../tokens/colors';
 import { opacity } from '../tokens/opacity';
 import { Theme } from './theme';

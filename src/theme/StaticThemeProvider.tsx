@@ -1,5 +1,3 @@
-// File: src/theme/StaticThemeProvider.tsx
-
 // Prop-driven ThemeProvider — no Zustand, no AsyncStorage dependency.
 
 import React, { useMemo } from 'react';

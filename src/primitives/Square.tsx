@@ -1,5 +1,3 @@
-// File: src/primitives/Square.tsx
-
 import React from 'react';
 import { View, type ViewProps, type ColorValue } from 'react-native';
 import { radius, type Radius } from '../tokens';

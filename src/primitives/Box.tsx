@@ -1,5 +1,3 @@
-// File: src/primitives/Box.tsx
-
 import React from 'react';
 import { View, type ViewProps, type ViewStyle, type ColorValue } from 'react-native';
 import { spacing, radius, borders, type Spacing, type Radius, type Borders } from '../tokens';

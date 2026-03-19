@@ -1,5 +1,3 @@
-// File: src/hooks/useAccessibilityProps.ts
-
 import { useMemo } from 'react';
 import type { AccessibilityRole, AccessibilityState } from 'react-native';
 

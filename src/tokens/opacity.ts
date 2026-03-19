@@ -1,5 +1,3 @@
-// File: src/tokens/opacity.ts
-
 /**
  * Opacity tokens — consistent transparency across overlays and states.
  */

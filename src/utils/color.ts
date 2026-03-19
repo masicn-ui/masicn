@@ -1,5 +1,3 @@
-// File: src/utils/color.ts
-
 /**
  * Converts a hex color string to an rgba() string.
  *

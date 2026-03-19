@@ -1,5 +1,3 @@
-// File: src/hooks/useFocusTrap.ts
-
 import { useRef, useEffect, useCallback } from 'react';
 import { AccessibilityInfo, findNodeHandle, type View } from 'react-native';
 

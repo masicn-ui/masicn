@@ -1,5 +1,3 @@
-// File: src/theme/ThemeProvider.tsx
-
 import React, { useMemo, useState, useCallback } from 'react';
 import { useColorScheme } from 'react-native';
 import { ThemeContext, type ThemeContextValue, type ThemeMode } from './ThemeContext';

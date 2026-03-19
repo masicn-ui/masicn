@@ -1,5 +1,3 @@
-// File: src/tokens/radius.ts
-
 /**
  * Border radius scale.
  */

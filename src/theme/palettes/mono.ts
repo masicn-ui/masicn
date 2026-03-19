@@ -1,5 +1,3 @@
-// File: src/theme/palettes/mono.ts
-
 import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
 

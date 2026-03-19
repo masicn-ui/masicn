@@ -1,5 +1,3 @@
-// File: src/primitives/Circle.tsx
-
 import React from 'react';
 import { View, type ViewProps, type ColorValue } from 'react-native';
 

@@ -1,5 +1,3 @@
-// File: src/tokens/layout.ts
-
 /**
  * Layout tokens — responsive constraints for mobile, tablet, foldables.
  */

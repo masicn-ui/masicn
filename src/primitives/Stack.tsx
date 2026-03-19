@@ -1,5 +1,3 @@
-// File: src/primitives/Stack.tsx
-
 import React from 'react';
 import { StyleSheet, View, type ViewProps } from 'react-native';
 import { spacing, type Spacing } from '../tokens';

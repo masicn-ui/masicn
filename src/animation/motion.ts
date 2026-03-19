@@ -1,5 +1,3 @@
-// File: src/animation/motion.ts
-
 import { Easing } from 'react-native';
 
 /**

@@ -1,5 +1,3 @@
-// File: src/primitives/Spacer.tsx
-
 import React from 'react';
 import { View } from 'react-native';
 

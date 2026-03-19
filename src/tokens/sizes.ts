@@ -1,5 +1,3 @@
-// File: src/tokens/sizes.ts
-
 /**
  * Component size tokens — raw scale.
  * Semantic mappings like iconSizes should be used for icons.

@@ -1,5 +1,3 @@
-// File: src/theme/theme.ts
-
 /**
  * Semantic theme shape — both light and dark must satisfy this interface.
  *

@@ -1,5 +1,3 @@
-// File: src/primitives/Row.tsx
-
 import React from 'react';
 import { StyleSheet, View, type ViewProps, type ViewStyle } from 'react-native';
 import { spacing, type Spacing } from '../tokens';

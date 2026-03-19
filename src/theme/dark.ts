@@ -1,5 +1,3 @@
-// File: src/theme/dark.ts
-
 import { palette } from '../tokens/colors';
 import { opacity } from '../tokens/opacity';
 import { Theme } from './theme';

@@ -1,5 +1,3 @@
-// File: src/tokens/iconSizes.ts
-
 /**
  * Semantic icon sizes — maps intent instead of raw numbers.
  */

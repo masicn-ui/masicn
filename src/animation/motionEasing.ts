@@ -1,4 +1,3 @@
-// File: src/animation/motionEasing.ts
 //
 // Reanimated-specific easing functions — kept in a separate file so that
 // animation/motion.ts (pure tokens) can be imported without triggering the

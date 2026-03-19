@@ -1,5 +1,3 @@
-// File: src/tokens/borders.ts
-
 import { StyleSheet } from 'react-native';
 
 /**

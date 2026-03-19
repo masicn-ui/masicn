@@ -1,5 +1,3 @@
-// File: src/primitives/Divider.tsx
-
 import React from 'react';
 import { View, StyleSheet, type ViewProps } from 'react-native';
 import { useTheme } from '../theme';

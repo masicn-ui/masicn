@@ -1,5 +1,3 @@
-// File: src/tokens/index.ts
-
 import { spacing } from './spacing';
 import { radius } from './radius';
 import { borders } from './borders';

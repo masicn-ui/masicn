@@ -1,5 +1,3 @@
-// File: src/theme/palettes/amber.ts
-
 import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
 

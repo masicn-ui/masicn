@@ -1,5 +1,3 @@
-// File: src/tokens/elevation.ts
-
 import {ViewStyle} from 'react-native';
 
 /**

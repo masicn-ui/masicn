@@ -1,5 +1,3 @@
-// File: src/system/MasicnProvider.tsx
-
 import React from 'react';
 import { ThemeProvider } from '../theme';
 import type { ThemeMode, ThemePair } from '../theme';

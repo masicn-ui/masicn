@@ -1,5 +1,3 @@
-// File: src/primitives/SafeAreaScreen.tsx
-
 import React from 'react';
 import { StyleSheet, type ViewStyle } from 'react-native';
 import { SafeAreaView, type Edge } from 'react-native-safe-area-context';

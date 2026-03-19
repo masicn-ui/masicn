@@ -1,5 +1,3 @@
-// File: src/utils/index.ts
-
 export { rgba } from './color';
 
 export function clamp(value: number, min: number, max: number): number {

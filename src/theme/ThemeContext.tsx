@@ -1,5 +1,3 @@
-// File: src/theme/ThemeContext.tsx
-
 import { createContext, useContext } from 'react';
 import type { Theme } from './theme';
 

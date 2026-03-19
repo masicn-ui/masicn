@@ -1,5 +1,3 @@
-// File: src/primitives/Text.tsx
-
 import React from 'react';
 import {
   Text as RNText,

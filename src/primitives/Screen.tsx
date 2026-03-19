@@ -1,5 +1,3 @@
-// File: src/primitives/Screen.tsx
-
 import React from 'react';
 import { StyleSheet, View, type ViewProps } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';

@@ -1,5 +1,3 @@
-// File: src/tokens/spacing.ts
-
 /**
  * Spacing scale — 4pt base grid.
  * Use these tokens for padding, margin, and gap values.

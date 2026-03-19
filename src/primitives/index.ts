@@ -1,5 +1,3 @@
-// File: src/primitives/index.ts
-
 export { Box } from './Box';
 export { Stack } from './Stack';
 export { Row } from './Row';

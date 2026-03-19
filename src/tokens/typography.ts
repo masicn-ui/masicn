@@ -1,5 +1,3 @@
-// File: src/tokens/typography.ts
-
 import { TextStyle } from 'react-native';
 
 /**

@@ -1,5 +1,3 @@
-// File: src/index.ts
-
 // ─── System ───────────────────────────────────────
 export { MasicnProvider, Masicn } from './system';
 

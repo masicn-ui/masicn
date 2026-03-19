@@ -1,5 +1,3 @@
-// File: src/primitives/Surface.tsx
-
 import React from 'react';
 import { View, type ViewProps, type ViewStyle } from 'react-native';
 import { useTheme } from '../theme';

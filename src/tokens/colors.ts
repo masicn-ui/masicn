@@ -1,5 +1,3 @@
-// File: src/tokens/colors.ts
-
 /**
  * Raw color palette — the only place hex values should live.
  * Components never import this directly; they consume semantic
