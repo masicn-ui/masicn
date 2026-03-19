@@ -1,5 +1,9 @@
-// File: src/theme/palettes/amber.ts
-
+/**
+ * Amber palette — warm golden amber tones.
+ * Light: rich amber-brown primaries on a warm cream canvas.
+ * Dark: deep espresso backgrounds with golden-yellow text and accents.
+ * Great for productivity apps, journals, and premium warm-toned UIs.
+ */
 import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
 

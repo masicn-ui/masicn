@@ -1,5 +1,9 @@
-// File: src/theme/dark.ts
-
+/**
+ * Default dark theme — built on the masi palette.
+ * Deep navy surfaces, aqua/teal accents, and warm papayaWhip text.
+ *
+ * Use `createTheme()` to override individual tokens while keeping everything else.
+ */
 import { palette } from '../tokens/colors';
 import { opacity } from '../tokens/opacity';
 import { Theme } from './theme';

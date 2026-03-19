@@ -1,5 +1,15 @@
-// File: src/primitives/Screen.tsx
-
+/**
+ * Screen — full-screen root container with theme background and safe area support.
+ *
+ * Uses `useSafeAreaInsets` to inset content away from notches and home indicators.
+ * Applies `theme.colors.background` automatically.
+ *
+ * ```tsx
+ * <Screen padded safe>
+ *   <Text>Content</Text>
+ * </Screen>
+ * ```
+ */
 import React from 'react';
 import { StyleSheet, View, type ViewProps } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -7,9 +17,9 @@ import { useTheme } from '../theme';
 import { layout } from '../tokens';
 
 interface ScreenProps extends ViewProps {
-  /** Horizontal padding — defaults to lg (16) */
+  /** Adds `layout.screenPadding` (16pt) horizontal padding. Defaults to `true`. */
   padded?: boolean;
-  /** Respect safe area insets */
+  /** Insets content for device notch / home indicator. Defaults to `true`. */
   safe?: boolean;
 }
 

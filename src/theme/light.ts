@@ -1,5 +1,9 @@
-// File: src/theme/light.ts
-
+/**
+ * Default light theme — built on the masi palette.
+ * Warm off-whites, teal accents, and deep inkBlack primaries.
+ *
+ * Use `createTheme()` to override individual tokens while keeping everything else.
+ */
 import { palette } from '../tokens/colors';
 import { opacity } from '../tokens/opacity';
 import { Theme } from './theme';

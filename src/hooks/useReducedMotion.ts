@@ -1,5 +1,3 @@
-// File: src/hooks/useReducedMotion.ts
-
 import { useEffect, useState } from 'react';
 import { AccessibilityInfo } from 'react-native';
 

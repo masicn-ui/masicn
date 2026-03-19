@@ -1,5 +1,3 @@
-// File: src/tokens/index.ts
-
 import { spacing } from './spacing';
 import { radius } from './radius';
 import { borders } from './borders';
@@ -10,6 +8,15 @@ import { iconSizes } from './iconSizes';
 import { layout } from './layout';
 import { motion } from '../animation/motion';
 
+/**
+ * All non-color design tokens in a single object.
+ * Useful when you want to pass the full token set to a theming utility or logger.
+ *
+ * For individual tokens, prefer named imports:
+ * ```ts
+ * import { spacing, radius } from '@masicn/ui';
+ * ```
+ */
 export const MasiTokens = {
     spacing,
     radius,
@@ -22,6 +29,14 @@ export const MasiTokens = {
     motion,
 };
 
+/**
+ * Hook that returns all non-color design tokens.
+ * Useful for components that need multiple token groups at once.
+ *
+ * ```ts
+ * const { spacing, radius, elevation } = useTokens();
+ * ```
+ */
 export function useTokens() {
     return MasiTokens;
 }

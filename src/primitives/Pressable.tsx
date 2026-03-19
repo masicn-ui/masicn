@@ -1,5 +1,3 @@
-// File: src/primitives/Pressable.tsx
-
 import React from 'react';
 import {
   Pressable as RNPressable,

@@ -1,5 +1,9 @@
-// File: src/theme/palettes/forest.ts
-
+/**
+ * Forest palette — deep greens, earthy tawny browns, and natural off-white.
+ * Light: forest-green primaries on a warm parchment background with brown secondary.
+ * Dark: near-black forest floor surfaces with sage-green text and accents.
+ * Great for nature, wellness, and outdoor-focused apps.
+ */
 import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
 

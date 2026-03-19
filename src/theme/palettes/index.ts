@@ -1,5 +1,3 @@
-// File: src/theme/palettes/index.ts
-
 export { masiPalette } from './masi';
 export { oceanPalette } from './ocean';
 export { sunsetPalette } from './sunset';

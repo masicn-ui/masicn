@@ -1,5 +1,9 @@
-// File: src/theme/palettes/ocean.ts
-
+/**
+ * Ocean palette — deep teals, aqua cyans, and cool sea-blue tones.
+ * Light: navy-teal primaries on a pale aqua background with electric cyan accents.
+ * Dark: near-black deep-sea surfaces with bright aqua text and teal highlights.
+ * Great for fintech, health, and any app that wants a calm, professional feel.
+ */
 import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
 

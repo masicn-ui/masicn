@@ -1,5 +1,3 @@
-// File: src/theme/index.ts
-
 export { ThemeProvider } from './ThemeProvider';
 export { StaticThemeProvider } from './StaticThemeProvider';
 export { useTheme } from './ThemeContext';

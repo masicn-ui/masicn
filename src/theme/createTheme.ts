@@ -1,5 +1,3 @@
-// File: src/theme/createTheme.ts
-
 import type { Theme } from './theme';
 import { lightTheme } from './light';
 import { darkTheme } from './dark';

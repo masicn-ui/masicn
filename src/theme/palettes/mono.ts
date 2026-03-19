@@ -1,5 +1,9 @@
-// File: src/theme/palettes/mono.ts
-
+/**
+ * Mono palette — pure grayscale with no chromatic hue.
+ * Light: near-black text on zinc-50 backgrounds; status colors are the only accents.
+ * Dark: true-black surfaces with off-white text — maximal contrast.
+ * Ideal for minimalist, typographic-first, or accessibility-critical apps.
+ */
 import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
 

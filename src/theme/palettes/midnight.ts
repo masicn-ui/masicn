@@ -1,5 +1,9 @@
-// File: src/theme/palettes/midnight.ts
-
+/**
+ * Midnight palette — deep indigo-violet hues with cool lavender accents.
+ * Light: rich midnight-blue primaries on a pale periwinkle background.
+ * Dark: near-black navy surfaces with soft lavender text and violet highlights.
+ * Perfect for productivity tools, developer apps, and dark-first interfaces.
+ */
 import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
 
