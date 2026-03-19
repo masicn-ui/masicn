@@ -18,9 +18,9 @@ export function rgba(hex: string, alpha: number): string {
     const full =
         clean.length === 3
             ? clean
-                  .split('')
-                  .map(c => c + c)
-                  .join('')
+                .split('')
+                .map(c => c + c)
+                .join('')
             : clean;
 
     const r = parseInt(full.substring(0, 2), 16);

@@ -34,8 +34,8 @@ export function useResponsive(): ResponsiveInfo {
     const breakpoint: Breakpoint = isLargeTablet
         ? 'largeTablet'
         : isTablet
-          ? 'tablet'
-          : 'phone';
+            ? 'tablet'
+            : 'phone';
 
     function select<T>(values: Partial<Record<Breakpoint, T>> & { phone: T }): T {
         if (isLargeTablet && values.largeTablet !== undefined) {
