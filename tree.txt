@@ -1,81 +1,78 @@
 .
+├── README.md
 ├── babel.config.js
 ├── package.json
-├── README.md
-├── src
-│   ├── animation
-│   │   ├── index.ts
-│   │   ├── motion.ts
-│   │   └── motionEasing.ts
-│   ├── hooks
-│   │   ├── index.ts
-│   │   ├── useAccessibilityProps.ts
-│   │   ├── useFocusTrap.ts
-│   │   ├── useReducedMotion.ts
-│   │   └── useResponsive.ts
-│   ├── index.ts
-│   ├── primitives
-│   │   ├── AspectRatio.tsx
-│   │   ├── Box.tsx
-│   │   ├── Center.tsx
-│   │   ├── Circle.tsx
-│   │   ├── Divider.tsx
-│   │   ├── index.ts
-│   │   ├── Pressable.tsx
-│   │   ├── Row.tsx
-│   │   ├── SafeAreaScreen.tsx
-│   │   ├── Screen.tsx
-│   │   ├── Spacer.tsx
-│   │   ├── Square.tsx
-│   │   ├── Stack.tsx
-│   │   ├── Surface.tsx
-│   │   ├── Text.tsx
-│   │   └── Wrap.tsx
-│   ├── system
-│   │   ├── index.ts
-│   │   ├── Masicn.tsx
-│   │   ├── MasicnProvider.tsx
-│   │   └── PortalHost.tsx
-│   ├── theme
-│   │   ├── createTheme.ts
-│   │   ├── dark.ts
-│   │   ├── index.ts
-│   │   ├── light.ts
-│   │   ├── palettes
-│   │   │   ├── amber.ts
-│   │   │   ├── coffee.ts
-│   │   │   ├── forest.ts
-│   │   │   ├── index.ts
-│   │   │   ├── mashi.ts
-│   │   │   ├── masi.ts
-│   │   │   ├── midnight.ts
-│   │   │   ├── mono.ts
-│   │   │   ├── nord.ts
-│   │   │   ├── ocean.ts
-│   │   │   ├── rose.ts
-│   │   │   └── sunset.ts
-│   │   ├── StaticThemeProvider.tsx
-│   │   ├── theme.ts
-│   │   ├── ThemeContext.tsx
-│   │   └── ThemeProvider.tsx
-│   ├── tokens
-│   │   ├── borders.ts
-│   │   ├── colors.ts
-│   │   ├── elevation.ts
-│   │   ├── iconSizes.ts
-│   │   ├── index.ts
-│   │   ├── layout.ts
-│   │   ├── opacity.ts
-│   │   ├── radius.ts
-│   │   ├── sizes.ts
-│   │   ├── spacing.ts
-│   │   └── typography.ts
-│   ├── utils
-│   │   ├── color.ts
-│   │   └── index.ts
-│   └── WelcomeScreen.tsx
-├── tree.txt
+├── src/
+│   ├── WelcomeScreen.tsx
+│   ├── animation/
+│   │   ├── index.ts
+│   │   ├── motion.ts
+│   │   └── motionEasing.ts
+│   ├── hooks/
+│   │   ├── index.ts
+│   │   ├── useAccessibilityProps.ts
+│   │   ├── useFocusTrap.ts
+│   │   ├── useReducedMotion.ts
+│   │   └── useResponsive.ts
+│   ├── index.ts
+│   ├── primitives/
+│   │   ├── AspectRatio.tsx
+│   │   ├── Box.tsx
+│   │   ├── Center.tsx
+│   │   ├── Circle.tsx
+│   │   ├── Divider.tsx
+│   │   ├── Pressable.tsx
+│   │   ├── Row.tsx
+│   │   ├── SafeAreaScreen.tsx
+│   │   ├── Screen.tsx
+│   │   ├── Spacer.tsx
+│   │   ├── Square.tsx
+│   │   ├── Stack.tsx
+│   │   ├── Surface.tsx
+│   │   ├── Text.tsx
+│   │   ├── Wrap.tsx
+│   │   └── index.ts
+│   ├── system/
+│   │   ├── Masicn.tsx
+│   │   ├── MasicnProvider.tsx
+│   │   ├── PortalHost.tsx
+│   │   └── index.ts
+│   ├── theme/
+│   │   ├── StaticThemeProvider.tsx
+│   │   ├── ThemeContext.tsx
+│   │   ├── ThemeProvider.tsx
+│   │   ├── createTheme.ts
+│   │   ├── dark.ts
+│   │   ├── index.ts
+│   │   ├── light.ts
+│   │   ├── palettes/
+│   │   │   ├── amber.ts
+│   │   │   ├── coffee.ts
+│   │   │   ├── forest.ts
+│   │   │   ├── index.ts
+│   │   │   ├── mashi.ts
+│   │   │   ├── masi.ts
+│   │   │   ├── midnight.ts
+│   │   │   ├── mono.ts
+│   │   │   ├── nord.ts
+│   │   │   ├── ocean.ts
+│   │   │   ├── rose.ts
+│   │   │   └── sunset.ts
+│   │   └── theme.ts
+│   ├── tokens/
+│   │   ├── borders.ts
+│   │   ├── colors.ts
+│   │   ├── elevation.ts
+│   │   ├── iconSizes.ts
+│   │   ├── index.ts
+│   │   ├── layout.ts
+│   │   ├── opacity.ts
+│   │   ├── radius.ts
+│   │   ├── sizes.ts
+│   │   ├── spacing.ts
+│   │   └── typography.ts
+│   └── utils/
+│       ├── color.ts
+│       └── index.ts
 ├── tsconfig.json
 └── tsup.config.ts
-
-10 directories, 69 files
