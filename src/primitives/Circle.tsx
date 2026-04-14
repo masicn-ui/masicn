@@ -2,7 +2,15 @@ import React from 'react';
 import { View, type ViewProps, type ColorValue } from 'react-native';
 
 export interface CircleProps extends ViewProps {
-  /** Diameter (width and height) in points. */
+  /**
+   * Diameter (width and height) in points.
+   * Prefer token values over raw numbers — e.g. `sizes.avatarMd`, `iconSizes.md`.
+   *
+   * @example
+   * import { sizes, iconSizes } from '../tokens';
+   * <Circle size={sizes.avatarMd} />
+   * <Circle size={iconSizes.lg} />
+   */
   size: number;
   /** Fill color of the circle. Accepts any React Native `ColorValue`. */
   backgroundColor?: ColorValue;

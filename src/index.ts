@@ -1,21 +1,20 @@
 // ─── System ───────────────────────────────────────
-export { MasicnProvider, Masicn } from './system';
+export { MasicnProvider, Masicn, ThemeToggle } from './system';
+export type { ThemeToggleProps } from './system';
 
 // ─── Theme ────────────────────────────────────────
 export {
   useTheme,
   ThemeProvider,
-  StaticThemeProvider,
   createTheme,
   lightTheme,
   darkTheme,
 } from './theme';
 
-export type { Theme, ThemeMode, ThemePair } from './theme';
+export type { Theme, ThemeMode, ThemePair, PaletteEntry } from './theme';
 
 // ─── Tokens ───────────────────────────────────────
 export {
-  palette,
   spacing,
   radius,
   borders,
@@ -27,15 +26,45 @@ export {
   typography,
   fonts,
   fontFamilies,
+  gradients,
+  gradientDirections,
+  lineHeightRatios,
+  lh,
+  letterSpacing,
   MasiTokens,
+  motion,
+  useTokens,
 } from './tokens';
 
-export type { Spacing, Radius, Borders, Elevation, Layout, Opacity, IconSizes, Typography, TypographyVariant } from './tokens';
+export type { Spacing, Radius, Borders, Elevation, Layout, Opacity, IconSizes, Typography, TypographyVariant, FontRole, FontWeightKey, FontFamilyKey, GradientPreset, GradientDirection, LineHeightRatio, LetterSpacing, Motion } from './tokens';
 
 // ─── Animation ────────────────────────────────────
-export { motion, motionEasing } from './animation';
+export { motionEasing } from './animation';
+export type { MotionEasing } from './animation';
 
-export type { Motion, MotionEasing } from './animation';
+// ─── Icons ────────────────────────────────────────
+export {
+  SunIcon,
+  MoonIcon,
+  SearchIcon,
+  CheckIcon,
+  XIcon,
+  WarningIcon,
+  InfoIcon,
+  ChevronUpIcon,
+  ChevronDownIcon,
+  ChevronRightIcon,
+  ArrowLeftIcon,
+  PlusIcon,
+  MinusIcon,
+  StarIcon,
+  InboxIcon,
+  PaletteIcon,
+  SettingsIcon,
+  EyeIcon,
+  EyeOffIcon,
+  PaintBoardIcon,
+} from './icons';
 
 // ─── Primitives ───────────────────────────────────
 export {
@@ -54,17 +83,18 @@ export {
   Pressable,
   Screen,
   SafeAreaScreen,
+  Icon,
 } from './primitives';
 
-export type { PressableProps, SurfaceProps, CenterProps, WrapProps, AspectRatioProps, CircleProps, SquareProps } from './primitives';
+export type { PressableProps, SurfaceProps, CenterProps, WrapProps, AspectRatioProps, CircleProps, SquareProps, IconProps, IconComponent } from './primitives';
 
 // ─── Hooks ────────────────────────────────────────
 export {
   useAccessibilityProps,
   useFocusTrap,
+  useGradients,
   useReducedMotion,
   useResponsive,
-  useTokens,
 } from './hooks';
 
 export type { Breakpoint, ResponsiveInfo } from './hooks';

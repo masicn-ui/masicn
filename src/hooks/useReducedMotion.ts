@@ -7,9 +7,13 @@ import { AccessibilityInfo } from 'react-native';
  * Usage:
  * ```ts
  * const reducedMotion = useReducedMotion();
- * const config = reducedMotion
- *   ? { duration: 0 }
- *   : { damping: 12, stiffness: 200 };
+ *
+ * // Shorten duration/amplitude — never stop animation entirely
+ * const dur = reducedMotion ? 80 : 300;
+ * value.value = withTiming(target, { duration: dur });
+ *
+ * // For springs: reduce displacement instead of removing the animation
+ * const amplitude = reducedMotion ? 4 : 24;
  * ```
  */
 export function useReducedMotion(): boolean {

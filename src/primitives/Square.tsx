@@ -3,7 +3,15 @@ import { View, type ViewProps, type ColorValue } from 'react-native';
 import { radius, type Radius } from '../tokens';
 
 export interface SquareProps extends ViewProps {
-  /** Side length in points */
+  /**
+   * Side length in points.
+   * Prefer token values over raw numbers — e.g. `sizes.avatarMd`, `iconSizes.md`.
+   *
+   * @example
+   * import { sizes, iconSizes } from '../tokens';
+   * <Square size={sizes.avatarMd} />
+   * <Square size={iconSizes.lg} borderRadius="md" />
+   */
   size: number;
   backgroundColor?: ColorValue;
   /** Optional corner rounding via radius token */

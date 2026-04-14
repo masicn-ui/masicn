@@ -4,6 +4,8 @@
  */
 
 export const spacing = {
+  /** `0` — Explicit zero. Use to reset default platform padding/margin. */
+  none: 0,
   /** `2` — Hairline nudge. Icon inner padding, tiny offsets. */
   xxs: 2,
   /** `4` — Tight gap. Between icon and label, inline chips. */
