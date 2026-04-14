@@ -4,6 +4,10 @@ Core design system for [masicn](https://github.com/masicn-ui) — the copy-paste
 
 This package provides the design foundation that all masicn components are built on: tokens, theme system, primitives, hooks, and utilities. You don't use `@masicn/ui` directly to build UIs — you use the [masicn CLI](https://www.npmjs.com/package/masicn) to copy component source code into your project, and those components import from this package.
 
+[![npm version](https://img.shields.io/npm/v/@masicn/ui.svg?style=flat-square)](https://www.npmjs.com/package/@masicn/ui)
+[![npm downloads](https://img.shields.io/npm/dm/@masicn/ui.svg?style=flat-square)](https://www.npmjs.com/package/@masicn/ui)
+[![license](https://img.shields.io/npm/l/@masicn/ui.svg?style=flat-square)](./LICENSE)
+
 **Built from scratch by [Manish Kumar](https://manishh.in) ([@lordofthemind](https://github.com/lordofthemind)) at [skipp.co.in](https://skipp.co.in)**
 
 > **मसि** (masi) means _ink_ in Sanskrit and several Indian languages. Just as ink is the medium for writing anything, masicn is the medium for building anything in React Native.
