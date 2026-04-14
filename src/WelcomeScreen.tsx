@@ -27,16 +27,20 @@ const FEATURES = [
     description: 'Spacing, radius, elevation, color, and typography — every value typed and scale-driven.',
   },
   {
-    title: '10 palettes · light & dark',
+    title: '15 palettes · light & dark',
     description: 'Pick a palette at init. Both themes are generated and written to your project, ready to edit.',
   },
   {
-    title: '60+ components',
+    title: '70+ components',
     description: 'Copy-paste source, no runtime dependency. Yours to read, edit, and ship.',
   },
   {
     title: 'CLI first',
     description: 'One command to init, one to add. Components land in your codebase, not a node_modules black box.',
+  },
+  {
+    title: 'Reanimated 4 · Gesture Handler',
+    description: 'All animations run on the UI thread. Gesture-driven sheets, carousels, and overlays out of the box.',
   },
 ];
 
@@ -97,7 +101,10 @@ function Hero() {
           </Row>
         </Surface>
         <Surface level="sm" borderRadius="full" style={styles.pill}>
-          <Text variant="captionSmall" color="textSecondary">React Native CLI</Text>
+          <Text variant="captionSmall" color="textSecondary">70+ components</Text>
+        </Surface>
+        <Surface level="sm" borderRadius="full" style={styles.pill}>
+          <Text variant="captionSmall" color="textSecondary">15 palettes</Text>
         </Surface>
       </Row>
     </Box>
@@ -127,7 +134,11 @@ function Features() {
 
 function Terminal() {
   const { theme } = useTheme();
-  const cmds = ['$ npx masicn init', '$ masicn add button card avatar'];
+  const cmds = [
+    '$ npx masicn init',
+    '$ masicn add button',
+    '$ masicn add card avatar badge',
+  ];
   return (
     <Box style={[styles.terminal, { backgroundColor: theme.colors.textPrimary }]}>
       <Row gap="xs" style={styles.terminalHeader} align="center">
