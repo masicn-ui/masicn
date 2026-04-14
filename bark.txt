@@ -1,4 +1,5 @@
 .
+├── CLAUDE.md
 ├── README.md
 ├── babel.config.js
 ├── package.json
@@ -6,14 +7,36 @@
 │   ├── WelcomeScreen.tsx
 │   ├── animation/
 │   │   ├── index.ts
-│   │   ├── motion.ts
 │   │   └── motionEasing.ts
 │   ├── hooks/
 │   │   ├── index.ts
 │   │   ├── useAccessibilityProps.ts
 │   │   ├── useFocusTrap.ts
+│   │   ├── useGradients.ts
 │   │   ├── useReducedMotion.ts
 │   │   └── useResponsive.ts
+│   ├── icons/
+│   │   ├── ArrowLeftIcon.tsx
+│   │   ├── CheckIcon.tsx
+│   │   ├── ChevronDownIcon.tsx
+│   │   ├── ChevronRightIcon.tsx
+│   │   ├── ChevronUpIcon.tsx
+│   │   ├── EyeIcon.tsx
+│   │   ├── EyeOffIcon.tsx
+│   │   ├── InboxIcon.tsx
+│   │   ├── InfoIcon.tsx
+│   │   ├── MinusIcon.tsx
+│   │   ├── MoonIcon.tsx
+│   │   ├── PaintBoardIcon.tsx
+│   │   ├── PaletteIcon.tsx
+│   │   ├── PlusIcon.tsx
+│   │   ├── SearchIcon.tsx
+│   │   ├── SettingsIcon.tsx
+│   │   ├── StarIcon.tsx
+│   │   ├── SunIcon.tsx
+│   │   ├── WarningIcon.tsx
+│   │   ├── XIcon.tsx
+│   │   └── index.ts
 │   ├── index.ts
 │   ├── primitives/
 │   │   ├── AspectRatio.tsx
@@ -21,6 +44,7 @@
 │   │   ├── Center.tsx
 │   │   ├── Circle.tsx
 │   │   ├── Divider.tsx
+│   │   ├── Icon.tsx
 │   │   ├── Pressable.tsx
 │   │   ├── Row.tsx
 │   │   ├── SafeAreaScreen.tsx
@@ -36,9 +60,9 @@
 │   │   ├── Masicn.tsx
 │   │   ├── MasicnProvider.tsx
 │   │   ├── PortalHost.tsx
+│   │   ├── ThemeToggle.tsx
 │   │   └── index.ts
 │   ├── theme/
-│   │   ├── StaticThemeProvider.tsx
 │   │   ├── ThemeContext.tsx
 │   │   ├── ThemeProvider.tsx
 │   │   ├── createTheme.ts
@@ -47,13 +71,17 @@
 │   │   ├── light.ts
 │   │   ├── palettes/
 │   │   │   ├── amber.ts
+│   │   │   ├── candy.ts
+│   │   │   ├── citrus.ts
 │   │   │   ├── coffee.ts
 │   │   │   ├── forest.ts
+│   │   │   ├── grapeSoda.ts
 │   │   │   ├── index.ts
-│   │   │   ├── mashi.ts
+│   │   │   ├── jade.ts
 │   │   │   ├── masi.ts
 │   │   │   ├── midnight.ts
 │   │   │   ├── mono.ts
+│   │   │   ├── neonTeal.ts
 │   │   │   ├── nord.ts
 │   │   │   ├── ocean.ts
 │   │   │   ├── rose.ts
@@ -61,11 +89,13 @@
 │   │   └── theme.ts
 │   ├── tokens/
 │   │   ├── borders.ts
-│   │   ├── colors.ts
 │   │   ├── elevation.ts
+│   │   ├── gradients.ts
 │   │   ├── iconSizes.ts
 │   │   ├── index.ts
 │   │   ├── layout.ts
+│   │   ├── lineHeight.ts
+│   │   ├── motion.ts
 │   │   ├── opacity.ts
 │   │   ├── radius.ts
 │   │   ├── sizes.ts
@@ -74,5 +104,8 @@
 │   └── utils/
 │       ├── color.ts
 │       └── index.ts
+├── tree.txt
 ├── tsconfig.json
 └── tsup.config.ts
+
+10 directories, 98 files

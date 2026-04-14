@@ -25,7 +25,7 @@ export function PortalHost({ portalsRef, subscribe }: PortalHostProps) {
 
     return (
         <View pointerEvents="box-none" style={StyleSheet.absoluteFill}>
-            {Array.from(portalsRef.current.entries()).map(([key, node]) => (
+            {Array.from(portalsRef.current?.entries() ?? []).map(([key, node]) => (
                 <React.Fragment key={key}>
                     {node}
                 </React.Fragment>

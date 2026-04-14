@@ -13,8 +13,10 @@ export { Pressable } from './Pressable';
 export { Screen } from './Screen';
 export { SafeAreaScreen } from './SafeAreaScreen';
 export { Text } from './Text';
+export { Icon } from './Icon';
 
 export type { PressableProps } from './Pressable';
+export type { IconProps, IconComponent } from './Icon';
 export type { SurfaceProps } from './Surface';
 export type { CenterProps } from './Center';
 export type { WrapProps } from './Wrap';

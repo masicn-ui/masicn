@@ -19,6 +19,14 @@ export const opacity = {
     pressed: 0.8,
     /** `0.9` — Hover feedback. Pointer devices (web / large screen). */
     hover: 0.9,
+    /** `0.08` — Tint layer. Interactive highlight backgrounds (selected picker row, etc.). */
+    tint: 0.08,
+    /** `0.12` — Medium tint. Status-colour chip backgrounds (success/warning/error/info). */
+    tintMedium: 0.12,
+    /** `0.1` — Shimmer sweep highlight alpha in dark mode. */
+    shimmerSweepDark: 0.1,
+    /** `0.55` — Shimmer sweep highlight alpha in light mode. */
+    shimmerSweepLight: 0.55,
 } as const;
 
 export type Opacity = typeof opacity;

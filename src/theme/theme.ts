@@ -15,7 +15,7 @@
  *   Status       – feedback colours
  *   Interactive  – overlays, ripples, highlights
  *   Navigation   – nav-bar, tab-bar, cards
- *   Misc         – shadows, skeletons, badges
+ *   Misc         – shadows, skeletons
  */
 export interface Theme {
     /** `true` when the active theme variant is dark mode. */
@@ -32,6 +32,10 @@ export interface Theme {
         surfaceSecondary: string;
         /** Tertiary raised surface. Subtle inset areas, code blocks. */
         surfaceTertiary: string;
+        /** Floating overlay surface. Popovers, tooltips, context menus, dropdown menus.
+         *  In light mode equals surfacePrimary; in dark mode equals surfaceSecondary to
+         *  give floating elements a visually elevated appearance. */
+        surfaceOverlay: string;
 
         // ── Brand ──
         /** Primary brand color. Buttons, active indicators, links. */
@@ -46,6 +50,11 @@ export interface Theme {
         onSecondary: string;
         /** Text / icon color on a `tertiary` background. */
         onTertiary: string;
+        /** Low-opacity tinted background using the primary brand colour.
+         *  Use for soft selected states (outline chips, selected rows, ghost button hover),
+         *  tinted badge backgrounds, and any surface that needs subtle primary branding
+         *  without the visual weight of a full `primary` fill. */
+        primaryContainer: string;
 
         // ── Text ──
         /** High-emphasis body text. Headlines, paragraph copy. */
@@ -58,6 +67,8 @@ export interface Theme {
         textDisabled: string;
         /** Text on dark/inverted surfaces (e.g. toasts, filled badges). */
         textInverse: string;
+        /** Inline tappable text / hyperlinks within body copy. */
+        textLink: string;
 
         // ── Icons ──
         /** High-emphasis icon color. Default for most icons. */
@@ -104,6 +115,8 @@ export interface Theme {
         onWarning: string;
         /** Text / icon on an `info` background. */
         onInfo: string;
+        /** Text / icon on an `accent` background. */
+        onAccent: string;
 
         // ── Interactive ──
         /** Scrim behind modals and bottom sheets. */
@@ -124,13 +137,13 @@ export interface Theme {
         tabBarActive: string;
         /** Inactive tab icon / label color. */
         tabBarInactive: string;
+        /** Background of the tab bar strip. */
+        tabBarBackground: string;
 
         // ── Misc ──
         /** `shadowColor` to pair with elevation presets. */
         shadow: string;
         /** Skeleton loader placeholder color. */
         skeleton: string;
-        /** Full-screen backdrop behind stacked overlays. */
-        backdrop: string;
     };
 }

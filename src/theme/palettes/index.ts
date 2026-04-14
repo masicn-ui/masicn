@@ -8,3 +8,8 @@ export { midnightPalette } from './midnight';
 export { amberPalette } from './amber';
 export { nordPalette } from './nord';
 export { coffeePalette } from './coffee';
+export { citrusPalette } from './citrus';
+export { neonTealPalette } from './neonTeal';
+export { grapeSodaPalette } from './grapeSoda';
+export { jadePalette } from './jade';
+export { candyPalette } from './candy';

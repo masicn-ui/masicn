@@ -6,7 +6,7 @@ import { elevation } from './elevation';
 import { opacity } from './opacity';
 import { iconSizes } from './iconSizes';
 import { layout } from './layout';
-import { motion } from '../animation/motion';
+import { motion } from './motion';
 
 /**
  * All non-color design tokens in a single object.
@@ -43,9 +43,6 @@ export function useTokens() {
 
 // ─── Individual token exports ─────────────────────────────────────────────────
 
-export { palette } from './colors';
-export type { Palette } from './colors';
-
 export { spacing } from './spacing';
 export type { Spacing } from './spacing';
 
@@ -64,13 +61,14 @@ export type {
     TypographyVariant,
     FontRole,
     FontWeightKey,
+    FontFamilyKey,
 } from './typography';
 
 export { elevation } from './elevation';
 export type { Elevation } from './elevation';
 
-export { motion } from '../animation/motion';
-export type { Motion } from '../animation/motion';
+export { motion } from './motion';
+export type { Motion } from './motion';
 
 export { motionEasing } from '../animation/motionEasing';
 export type { MotionEasing } from '../animation/motionEasing';
@@ -85,3 +83,9 @@ export type { Opacity } from './opacity';
 
 export { iconSizes } from './iconSizes';
 export type { IconSizes } from './iconSizes';
+
+export { gradients, gradientDirections } from './gradients';
+export type { GradientPreset, GradientDirection } from './gradients';
+
+export { lineHeightRatios, lh, letterSpacing } from './lineHeight';
+export type { LineHeightRatio, LetterSpacing } from './lineHeight';

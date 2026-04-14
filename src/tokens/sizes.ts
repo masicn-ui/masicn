@@ -20,12 +20,6 @@ export const sizes = {
   /** `28` — Toggle switch thumb (knob) diameter. */
   switchThumb: 28,
 
-  // Touch targets
-  /** `40` — Minimum touch target size (WCAG 2.5.5). */
-  touchTarget: 40,
-  /** `48` — Comfortable touch target for primary actions. */
-  touchTargetLg: 48,
-
   // Button sizes
   /** `48` — Default button height. */
   buttonHeight: 48,
@@ -72,6 +66,10 @@ export const sizes = {
   menuMaxWidth: 320,
   /** `80` — Minimum swipe action button width. */
   swipeActionMinWidth: 80,
+  /** `64` — Default (md) swipeable row min-height. */
+  swipeableRowMd: 64,
+  /** `80` — Large (lg) swipeable row min-height. */
+  swipeableRowLg: 80,
   /** `400` — Max action sheet height before it becomes scrollable. */
   actionSheetMaxHeight: 400,
 
@@ -98,6 +96,18 @@ export const sizes = {
   // Badge
   /** `20` — Notification badge dot diameter. */
   badge: 20,
+
+  // Status dot diameters
+  /** `8`  — Small status dot (online/away indicator). */
+  statusDotSm: 8,
+  /** `12` — Default status dot diameter. */
+  statusDotMd: 12,
+  /** `16` — Large status dot diameter. */
+  statusDotLg: 16,
+
+  // Progress circle stroke
+  /** `8` — Default progress circle arc stroke width. */
+  progressCircleStroke: 8,
 
   // Carousel dots
   /** `6` — Inactive carousel pagination dot diameter. */
