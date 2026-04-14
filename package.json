@@ -1,7 +1,21 @@
 {
   "name": "@masicn/ui",
   "version": "0.0.1",
-  "description": "Core framework for masicn — tokens, theme, primitives, hooks",
+  "description": "Core design system for masicn — tokens, theme, primitives, hooks",
+  "author": {
+    "name": "Manish Kumar",
+    "email": "manishkumar0225@outlook.com",
+    "url": "https://manishh.in"
+  },
+  "publisher": "masicn-ui",
+  "homepage": "https://masicn-ui.github.io/masicn/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/masicn-ui/masicn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/masicn-ui/registry/issues"
+  },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -12,7 +26,11 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -25,12 +43,34 @@
     "react-native-safe-area-context": ">=4.0.0"
   },
   "peerDependenciesMeta": {
-    "react-native-reanimated": { "optional": true },
-    "react-native-safe-area-context": { "optional": true }
+    "react-native-reanimated": {
+      "optional": true
+    },
+    "react-native-safe-area-context": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "tsup": "^8.0.0",
     "typescript": "^5.0.0"
   },
-  "keywords": ["react-native", "ui", "design-system", "tokens", "theme", "masicn"]
+  "keywords": [
+    "react-native",
+    "ui",
+    "design-system",
+    "tokens",
+    "theme",
+    "masicn",
+    "primitives",
+    "copy-paste",
+    "shadcn",
+    "dark-mode",
+    "animation",
+    "reanimated"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
