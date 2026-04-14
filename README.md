@@ -1,8 +1,12 @@
 # @masicn/ui
 
-Core framework for [masicn](https://masicn.dev) — the copy-paste React Native UI ecosystem.
+Core design system for [masicn](https://github.com/masicn-ui) — the copy-paste React Native UI ecosystem.
 
 This package provides the design foundation that all masicn components are built on: tokens, theme system, primitives, hooks, and utilities. You don't use `@masicn/ui` directly to build UIs — you use the [masicn CLI](https://www.npmjs.com/package/masicn) to copy component source code into your project, and those components import from this package.
+
+**Built from scratch by [Manish Kumar](https://manishh.in) ([@lordofthemind](https://github.com/lordofthemind)) at [skipp.co.in](https://skipp.co.in)**
+
+> **मसि** (masi) means _ink_ in Sanskrit and several Indian languages. Just as ink is the medium for writing anything, masicn is the medium for building anything in React Native.
 
 ## Installation
 
@@ -70,7 +74,7 @@ const { theme, colorMode } = useTheme();
 
 ### Built-in Palettes
 
-10 palettes are available out of the box. Pick one during `npx masicn init`:
+15 palettes are available out of the box. Pick one during `npx masicn init`:
 
 | Palette | Description |
 |---------|-------------|
@@ -84,6 +88,11 @@ const { theme, colorMode } = useTheme();
 | `amber` | Golden honey + espresso |
 | `nord` | Arctic blue-grays + frost |
 | `coffee` | Espresso browns + caramel |
+| `candy` | Hot pink + vivid sky blue — playful |
+| `citrus` | Lime green + golden yellow — fresh |
+| `grapeSoda` | Violet-purple + acid lime — loud |
+| `jade` | Deep emerald + warm gold — premium |
+| `neonTeal` | Electric teal + vivid violet — dark-native |
 
 ## Tokens
 
@@ -186,4 +195,6 @@ See the [masicn CLI docs](https://www.npmjs.com/package/masicn) for the full wor
 
 ## License
 
-MIT
+[MIT](./LICENSE) — free to use, modify, and distribute. Copyright © 2026 [Skipp](https://skipp.co.in).
+
+When you copy components into your project with `masicn add`, those files become part of your project and are also covered under the MIT license — you can change them, ship them, or sell them without restriction. The only requirement is that the original copyright notice is retained.
