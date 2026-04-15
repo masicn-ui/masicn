@@ -16,6 +16,8 @@ This package provides the design foundation that all masicn components are built
 
 `@masicn/ui` is set up automatically when you run `npx masicn init`. You don't need to install it manually.
 
+> **Supported project type:** masicn currently works with **React Native CLI** projects only — scaffolded via `npx @react-native-community/cli@latest init`. Expo is not supported yet.
+
 If you need to install it yourself:
 
 ```bash
