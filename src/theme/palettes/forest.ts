@@ -8,38 +8,38 @@ import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
 
 const c = {
-    white:        '#ffffff',
-    black:        '#000000',
+    white: '#ffffff',
+    black: '#000000',
     // Light backgrounds
-    parchment:    '#f2ede4',
-    sand:         '#e0d5c4',
+    parchment: '#f2ede4',
+    sand: '#e0d5c4',
     // Dark backgrounds
-    forestFloor:  '#060e08',
-    darkMoss:     '#0d1f10',
-    deepMoss:     '#162a1a',
+    forestFloor: '#060e08',
+    darkMoss: '#0d1f10',
+    deepMoss: '#162a1a',
     // Base tone (dark text / shadow in light mode)
-    inkForest:    '#0f1e14',
+    inkForest: '#0f1e14',
     // Brand
-    forestGreen:  '#1a4d2e',
-    tawnyBrown:   '#7a4f2a',
-    midGreen:     '#2d7a4f',
-    sageGreen:    '#7ec89a',
+    forestGreen: '#1a4d2e',
+    tawnyBrown: '#7a4f2a',
+    midGreen: '#2d7a4f',
+    sageGreen: '#7ec89a',
     caramelBrown: '#c8966a',
-    leafGreen:    '#4aaa72',
+    leafGreen: '#4aaa72',
     // Muted
-    warmSand:     '#b4a882',
-    paleGold:     '#c8b896',
+    warmSand: '#b4a882',
+    paleGold: '#c8b896',
     // Accents
-    appleGreen:   '#6aab4a',
-    limeGreen:    '#8cd46a',
+    appleGreen: '#6aab4a',
+    limeGreen: '#8cd46a',
     // Light text on dark
-    pearlWhite:   '#e8ede4',
+    pearlWhite: '#e8ede4',
     // Status
-    errorRed:     '#b91c1c',
+    errorRed: '#b91c1c',
     warningBrown: '#b45309',
-    softRed:      '#f87171',
-    softGreen:    '#4ade80',
-    softYellow:   '#fbbf24',
+    softRed: '#f87171',
+    softGreen: '#4ade80',
+    softYellow: '#fbbf24',
 } as const;
 
 const lightForest: Theme = {
@@ -167,7 +167,7 @@ const darkForest: Theme = {
         tabBarInactive: c.leafGreen,
         tabBarBackground: c.darkMoss,
 
-        shadow: c.black,
+        shadow: c.white,
         skeleton: c.deepMoss,
     },
 };

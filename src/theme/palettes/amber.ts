@@ -8,31 +8,31 @@ import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
 
 const c = {
-    white:        '#ffffff',
-    black:        '#000000',
+    white: '#ffffff',
+    black: '#000000',
     // Light backgrounds
-    creamYellow:  '#fffbeb',
+    creamYellow: '#fffbeb',
     paleSunshine: '#fef3c7',
     // Dark backgrounds
     darkEspresso: '#0f0700',
     deepChestnut: '#1c0e00',
-    chestnut:     '#2a1800',
+    chestnut: '#2a1800',
     // Base tone (dark text / shadow in light mode)
-    inkDark:      '#1c0a00',
+    inkDark: '#1c0a00',
     // Brand
-    mahogany:     '#92400e',
-    caramel:      '#b45309',
-    goldenAmber:  '#d97706',
-    sunYellow:    '#fcd34d',
-    honey:        '#f59e0b',
-    paleGold:     '#fbbf24',
+    mahogany: '#92400e',
+    caramel: '#b45309',
+    goldenAmber: '#d97706',
+    sunYellow: '#fcd34d',
+    honey: '#f59e0b',
+    paleGold: '#fbbf24',
     // Accent
-    amberGlow:    '#fbbf24',
+    amberGlow: '#fbbf24',
     // Status
-    errorRed:     '#b91c1c',
-    forestGreen:  '#15803d',
-    softRed:      '#f87171',
-    softGreen:    '#4ade80',
+    errorRed: '#b91c1c',
+    forestGreen: '#15803d',
+    softRed: '#f87171',
+    softGreen: '#4ade80',
 } as const;
 
 const lightAmber: Theme = {
@@ -160,7 +160,7 @@ const darkAmber: Theme = {
         tabBarInactive: c.goldenAmber,
         tabBarBackground: c.deepChestnut,
 
-        shadow: c.black,
+        shadow: c.white,
         skeleton: c.chestnut,
     },
 };

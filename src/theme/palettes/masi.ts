@@ -6,26 +6,26 @@ import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
 
 const c = {
-    white:           '#ffffff',
+    white: '#ffffff',
     // Warm tones
-    papayaWhip:      '#ffecd1',
-    vanillaCustard:  '#e9d8a6',
-    vividTangerine:  '#ff7d00',
-    goldenOrange:    '#ee9b00',
+    papayaWhip: '#ffecd1',
+    vanillaCustard: '#e9d8a6',
+    vividTangerine: '#ff7d00',
+    goldenOrange: '#ee9b00',
     // Teal / cyan scale
-    darkCyan:        '#0a9396',
-    pearlAqua:       '#94d2bd',
-    darkTeal:        '#005f73',
-    stormyTeal:      '#15616d',
+    darkCyan: '#0a9396',
+    pearlAqua: '#94d2bd',
+    darkTeal: '#005f73',
+    stormyTeal: '#15616d',
     // Dark bases
-    inkBlack:        '#001219',
-    inkBlackDeep:    '#001524',
-    inkBlackAlt:     '#000814',
+    inkBlack: '#001219',
+    inkBlackDeep: '#001524',
+    inkBlackAlt: '#000814',
     // Navy scale
-    prussianBlue:    '#001d3d',
-    regalNavy:       '#003566',
+    prussianBlue: '#001d3d',
+    regalNavy: '#003566',
     // Status
-    oxidizedIron:    '#ae2012',
+    oxidizedIron: '#ae2012',
     schoolBusYellow: '#ffc300',
 } as const;
 
@@ -156,7 +156,7 @@ export const darkTheme: Theme = {
         tabBarInactive: c.darkCyan,
         tabBarBackground: c.prussianBlue,
 
-        shadow: c.inkBlack,
+        shadow: c.white,
         skeleton: c.regalNavy,
     },
 };

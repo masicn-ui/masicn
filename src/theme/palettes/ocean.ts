@@ -8,34 +8,34 @@ import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
 
 const c = {
-    white:         '#ffffff',
-    black:         '#000000',
+    white: '#ffffff',
+    black: '#000000',
     // Light backgrounds
-    iceBlue:       '#e8f4f8',
-    skyMist:       '#d1eaf4',
+    iceBlue: '#e8f4f8',
+    skyMist: '#d1eaf4',
     // Dark backgrounds
-    abyss:         '#000d14',
-    deepNavy:      '#001a28',
-    navySlate:     '#00263d',
+    abyss: '#000d14',
+    deepNavy: '#001a28',
+    navySlate: '#00263d',
     // Base tone (dark text / shadow in light mode)
-    deepSea:       '#00202a',
+    deepSea: '#00202a',
     // Brand
-    oceanBlue:     '#005f8a',
-    seaBlue:       '#0096b4',
-    aquaCyan:      '#00c4d4',
-    frostBlue:     '#7ed6e8',
+    oceanBlue: '#005f8a',
+    seaBlue: '#0096b4',
+    aquaCyan: '#00c4d4',
+    frostBlue: '#7ed6e8',
     // Muted
-    mistAqua:      '#90c4d4',
-    seafoam:       '#b8dce8',
+    mistAqua: '#90c4d4',
+    seafoam: '#b8dce8',
     // Accents & success
-    electricCyan:  '#00d4e8',
-    tealGreen:     '#00b4a0',
-    mintTeal:      '#00c4a0',
+    electricCyan: '#00d4e8',
+    tealGreen: '#00b4a0',
+    mintTeal: '#00c4a0',
     // Status
-    errorRed:      '#c0392b',
-    coralOrange:   '#e67e22',
-    crimsonRed:    '#e74c3c',
-    goldenAmber:   '#f39c12',
+    errorRed: '#c0392b',
+    coralOrange: '#e67e22',
+    crimsonRed: '#e74c3c',
+    goldenAmber: '#f39c12',
 } as const;
 
 const lightOcean: Theme = {
@@ -163,7 +163,7 @@ const darkOcean: Theme = {
         tabBarInactive: c.seaBlue,
         tabBarBackground: c.deepNavy,
 
-        shadow: c.black,
+        shadow: c.white,
         skeleton: c.navySlate,
     },
 };

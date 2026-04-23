@@ -8,38 +8,38 @@ import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
 
 const c = {
-    white:        '#ffffff',
-    black:        '#000000',
+    white: '#ffffff',
+    black: '#000000',
     // Light backgrounds
-    cream:        '#fff8f0',
-    peach:        '#fde8d0',
+    cream: '#fff8f0',
+    peach: '#fde8d0',
     // Dark backgrounds
-    deepViolet:   '#12001e',
-    midViolet:    '#1e0032',
-    darkIndigo:   '#2a0048',
+    deepViolet: '#12001e',
+    midViolet: '#1e0032',
+    darkIndigo: '#2a0048',
     // Base tone (dark text / shadow in light mode)
-    inkBrown:     '#1a0a00',
+    inkBrown: '#1a0a00',
     // Brand
-    burntOrange:  '#c0440a',
-    violet:       '#8b2fc9',
-    terracotta:   '#e85d24',
-    coralOrange:  '#ff9060',
-    lavender:     '#c88aff',
+    burntOrange: '#c0440a',
+    violet: '#8b2fc9',
+    terracotta: '#e85d24',
+    coralOrange: '#ff9060',
+    lavender: '#c88aff',
     // Muted
-    blush:        '#e8b89a',
-    softPeach:    '#f0c8a0',
+    blush: '#e8b89a',
+    softPeach: '#f0c8a0',
     // Accents
     sunsetOrange: '#ff8c00',
-    warmAmber:    '#ffaa40',
+    warmAmber: '#ffaa40',
     // Light text on dark
-    warmWhite:    '#fff0e8',
+    warmWhite: '#fff0e8',
     // Status
-    errorRed:     '#b91c1c',
+    errorRed: '#b91c1c',
     successGreen: '#16a34a',
     warningAmber: '#d97706',
-    softRed:      '#f87171',
-    softGreen:    '#4ade80',
-    softYellow:   '#fbbf24',
+    softRed: '#f87171',
+    softGreen: '#4ade80',
+    softYellow: '#fbbf24',
 } as const;
 
 const lightSunset: Theme = {
@@ -167,7 +167,7 @@ const darkSunset: Theme = {
         tabBarInactive: c.terracotta,
         tabBarBackground: c.midViolet,
 
-        shadow: c.black,
+        shadow: c.white,
         skeleton: c.darkIndigo,
     },
 };
