@@ -8,31 +8,31 @@ import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
 
 const c = {
-    white:        '#ffffff',
-    black:        '#000000',
+    white: '#ffffff',
+    black: '#000000',
     // Light backgrounds
-    blush:        '#fff0f3',
-    palePink:     '#ffd6df',
+    blush: '#fff0f3',
+    palePink: '#ffd6df',
     // Dark backgrounds
     deepBurgundy: '#1a0008',
-    darkRose:     '#2d0010',
-    midBurgundy:  '#3d0018',
+    darkRose: '#2d0010',
+    midBurgundy: '#3d0018',
     // Brand
-    crimsonRose:  '#9b1942',
-    hotPink:      '#c94070',
-    roseQuartz:   '#e8648a',
-    petalPink:    '#f4a8bc',
+    crimsonRose: '#9b1942',
+    hotPink: '#c94070',
+    roseQuartz: '#e8648a',
+    petalPink: '#f4a8bc',
     // Muted
-    roseLace:     '#f4c0cc',
+    roseLace: '#f4c0cc',
     // Accent
-    hotCoral:     '#ff6b9d',
+    hotCoral: '#ff6b9d',
     // Status
-    errorRed:     '#b91c1c',
-    forestGreen:  '#15803d',
+    errorRed: '#b91c1c',
+    forestGreen: '#15803d',
     warningBrown: '#b45309',
-    softRed:      '#f87171',
-    softGreen:    '#4ade80',
-    softYellow:   '#fbbf24',
+    softRed: '#f87171',
+    softGreen: '#4ade80',
+    softYellow: '#fbbf24',
 } as const;
 
 const lightRose: Theme = {
@@ -160,7 +160,7 @@ const darkRose: Theme = {
         tabBarInactive: c.hotPink,
         tabBarBackground: c.darkRose,
 
-        shadow: c.black,
+        shadow: c.white,
         skeleton: c.midBurgundy,
     },
 };

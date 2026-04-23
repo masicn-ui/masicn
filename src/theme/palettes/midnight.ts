@@ -8,32 +8,32 @@ import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
 
 const c = {
-    white:         '#ffffff',
-    black:         '#000000',
+    white: '#ffffff',
+    black: '#000000',
     // Light backgrounds
-    periwinkle:    '#eef0ff',
-    lavenderMist:  '#dde0ff',
+    periwinkle: '#eef0ff',
+    lavenderMist: '#dde0ff',
     // Dark backgrounds
-    deepMidnight:  '#04020f',
-    darkIndigo:    '#0a0520',
-    midIndigo:     '#140d30',
+    deepMidnight: '#04020f',
+    darkIndigo: '#0a0520',
+    midIndigo: '#140d30',
     // Brand
-    royalIndigo:   '#2d0fa8',
-    indigoBlue:    '#4b35c4',
-    softViolet:    '#6c56e0',
-    lavender:      '#a594ff',
-    purple:        '#7c5cff',
-    paleLavender:  '#c4b5ff',
+    royalIndigo: '#2d0fa8',
+    indigoBlue: '#4b35c4',
+    softViolet: '#6c56e0',
+    lavender: '#a594ff',
+    purple: '#7c5cff',
+    paleLavender: '#c4b5ff',
     // Muted
-    blueGray:      '#b0b8f0',
-    mistBlue:      '#c8ccf8',
+    blueGray: '#b0b8f0',
+    mistBlue: '#c8ccf8',
     // Status
-    errorRed:      '#dc2626',
-    successGreen:  '#16a34a',
-    warningAmber:  '#d97706',
-    softRed:       '#f87171',
-    softGreen:     '#4ade80',
-    softYellow:    '#fbbf24',
+    errorRed: '#dc2626',
+    successGreen: '#16a34a',
+    warningAmber: '#d97706',
+    softRed: '#f87171',
+    softGreen: '#4ade80',
+    softYellow: '#fbbf24',
 } as const;
 
 const lightMidnight: Theme = {
@@ -161,7 +161,7 @@ const darkMidnight: Theme = {
         tabBarInactive: c.indigoBlue,
         tabBarBackground: c.darkIndigo,
 
-        shadow: c.black,
+        shadow: c.white,
         skeleton: c.midIndigo,
     },
 };

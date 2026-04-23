@@ -168,7 +168,7 @@ const darkCandy: Theme = {
         tabBarInactive: c.brightPink,
         tabBarBackground: c.darkVoid,
 
-        shadow: c.black,
+        shadow: c.white,
         skeleton: c.deepVoid,
     },
 };

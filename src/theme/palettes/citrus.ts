@@ -165,7 +165,7 @@ const darkCitrus: Theme = {
         tabBarInactive: c.limeYellow,
         tabBarBackground: c.darkOlive,
 
-        shadow: c.black,
+        shadow: c.white,
         skeleton: c.deepOlive,
     },
 };

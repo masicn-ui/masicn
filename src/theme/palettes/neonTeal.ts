@@ -167,7 +167,7 @@ const darkNeonTeal: Theme = {
         tabBarInactive: c.glowTeal,
         tabBarBackground: c.darkAbyss,
 
-        shadow: c.black,
+        shadow: c.white,
         skeleton: c.deepAbyss,
     },
 };

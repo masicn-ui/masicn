@@ -10,26 +10,26 @@ import { opacity } from '../../tokens/opacity';
 // Zinc scale — light (950) → dark (50)
 const c = {
     // Zinc scale
-    zinc50:       '#fafafa',
-    zinc100:      '#f4f4f5',
-    zinc200:      '#e4e4e7',
-    zinc300:      '#d4d4d8',
-    zinc400:      '#a1a1aa',
-    zinc500:      '#71717a',
-    zinc700:      '#3f3f46',
-    zinc800:      '#27272a',
-    zinc900:      '#18181b',
-    zinc950:      '#09090b',
+    zinc50: '#fafafa',
+    zinc100: '#f4f4f5',
+    zinc200: '#e4e4e7',
+    zinc300: '#d4d4d8',
+    zinc400: '#a1a1aa',
+    zinc500: '#71717a',
+    zinc700: '#3f3f46',
+    zinc800: '#27272a',
+    zinc900: '#18181b',
+    zinc950: '#09090b',
     // Status — light mode
-    errorRed:     '#dc2626',
+    errorRed: '#dc2626',
     successGreen: '#16a34a',
     warningAmber: '#d97706',
-    infoBlue:     '#2563eb',
+    infoBlue: '#2563eb',
     // Status — dark mode
-    softRed:      '#f87171',
-    softGreen:    '#4ade80',
-    softYellow:   '#fbbf24',
-    skyBlue:      '#60a5fa',
+    softRed: '#f87171',
+    softGreen: '#4ade80',
+    softYellow: '#fbbf24',
+    skyBlue: '#60a5fa',
 } as const;
 
 const lightMono: Theme = {
@@ -92,7 +92,7 @@ const lightMono: Theme = {
         tabBarInactive: c.zinc400,
         tabBarBackground: c.zinc50,
 
-        shadow: c.zinc950,
+        shadow: c.zinc50,
         skeleton: c.zinc200,
     },
 };

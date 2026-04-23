@@ -8,33 +8,33 @@ import type { Theme } from '../theme';
 import { opacity } from '../../tokens/opacity';
 
 const c = {
-    white:        '#ffffff',
-    black:        '#000000',
+    white: '#ffffff',
+    black: '#000000',
     // Light backgrounds
-    latteCream:   '#faf6f0',
-    vanillaMilk:  '#f0e8dc',
+    latteCream: '#faf6f0',
+    vanillaMilk: '#f0e8dc',
     // Dark backgrounds
     darkEspresso: '#100700',
     richEspresso: '#1e0c00',
-    midEspresso:  '#2c1400',
+    midEspresso: '#2c1400',
     // Brand
-    darkRoast:    '#3e1c00',
-    mediumRoast:  '#6b3a1f',
-    lightRoast:   '#9c5c38',
+    darkRoast: '#3e1c00',
+    mediumRoast: '#6b3a1f',
+    lightRoast: '#9c5c38',
     caramelCream: '#e0b48a',
-    caramel:      '#c47a3c',
+    caramel: '#c47a3c',
     // Muted
-    milkyCoffee:  '#c8a882',
-    creamyBeige:  '#e0ccb4',
+    milkyCoffee: '#c8a882',
+    creamyBeige: '#e0ccb4',
     // Accent
     butterscotch: '#f0c070',
     // Status
-    errorRed:     '#b91c1c',
-    forestGreen:  '#15803d',
+    errorRed: '#b91c1c',
+    forestGreen: '#15803d',
     warningBrown: '#b45309',
-    softRed:      '#f87171',
-    softGreen:    '#4ade80',
-    softYellow:   '#fbbf24',
+    softRed: '#f87171',
+    softGreen: '#4ade80',
+    softYellow: '#fbbf24',
 } as const;
 
 const lightCoffee: Theme = {
@@ -162,7 +162,7 @@ const darkCoffee: Theme = {
         tabBarInactive: c.lightRoast,
         tabBarBackground: c.richEspresso,
 
-        shadow: c.black,
+        shadow: c.white,
         skeleton: c.midEspresso,
     },
 };

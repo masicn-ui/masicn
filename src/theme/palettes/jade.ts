@@ -168,7 +168,7 @@ const darkJade: Theme = {
         tabBarInactive: c.midEmerald,
         tabBarBackground: c.darkJade,
 
-        shadow: c.black,
+        shadow: c.white,
         skeleton: c.deepJade,
     },
 };

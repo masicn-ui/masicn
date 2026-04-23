@@ -167,7 +167,7 @@ const darkGrapeSoda: Theme = {
         tabBarInactive: c.medPurple,
         tabBarBackground: c.darkPurple,
 
-        shadow: c.black,
+        shadow: c.white,
         skeleton: c.deepPurple,
     },
 };
