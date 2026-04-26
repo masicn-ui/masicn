@@ -39,8 +39,8 @@ export {
 export type { Spacing, Radius, Borders, Elevation, Layout, Opacity, IconSizes, Typography, TypographyVariant, FontRole, FontWeightKey, FontFamilyKey, GradientPreset, GradientDirection, LineHeightRatio, LetterSpacing, Motion } from './tokens';
 
 // ─── Animation ────────────────────────────────────
-export { motionEasing } from './animation';
-export type { MotionEasing } from './animation';
+export { motionEasing } from './tokens';
+export type { MotionEasing } from './tokens';
 
 // ─── Icons ────────────────────────────────────────
 export {
