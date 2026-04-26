@@ -70,8 +70,8 @@ export type { Elevation } from './elevation';
 export { motion } from './motion';
 export type { Motion } from './motion';
 
-export { motionEasing } from '../animation/motionEasing';
-export type { MotionEasing } from '../animation/motionEasing';
+export { motionEasing } from './motionEasing';
+export type { MotionEasing } from './motionEasing';
 
 export { rgba } from '../utils/color';
 

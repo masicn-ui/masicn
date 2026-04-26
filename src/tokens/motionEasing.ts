@@ -1,8 +1,8 @@
 //
-// Reanimated-specific easing functions — kept in a separate file so that
-// animation/motion.ts (pure tokens) can be imported without triggering the
-// Reanimated worklet runtime. Only import this file from components that
-// actually run Reanimated animations.
+// Reanimated-specific easing functions kept as a token so components can
+// import them without pulling in the full animation layer. The animation
+// layer re-exports these values — prefer importing from '@masicn/ui' or
+// the masicn barrel (`'../../../masicn'`) rather than from this file directly.
 
 import { Easing as ReanimatedEasing } from 'react-native-reanimated';
 
