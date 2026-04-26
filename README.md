@@ -8,30 +8,20 @@ This package provides the design foundation that all masicn components are built
 [![npm downloads](https://img.shields.io/npm/dm/@masicn/ui.svg?style=flat-square)](https://www.npmjs.com/package/@masicn/ui)
 [![license](https://img.shields.io/npm/l/@masicn/ui.svg?style=flat-square)](./LICENSE)
 
-**Built from scratch by [Manish Kumar](https://manishh.in) ([@lordofthemind](https://github.com/lordofthemind)) at [skipp.co.in](https://skipp.co.in)**
+**Built from scratch by [Manish Kumar](https://manishh.in) ([@lordofthemind](https://github.com/lordofthemind))**
 
 > **मसि** (masi) means _ink_ in Sanskrit and several Indian languages. Just as ink is the medium for writing anything, masicn is the medium for building anything in React Native.
 
 ## Installation
 
-`@masicn/ui` is set up automatically when you run `npx masicn@latest init`. You don't need to install it manually.
+`@masicn/ui` is set up automatically when you run `npx masicn@latest init`. **You do not install it manually** — the CLI copies the design system source files directly into your project under `src/masicn/`. Your components then import from that local copy, not from this npm package.
 
 > **Supported project type:** masicn currently works with **React Native CLI** projects only — scaffolded via `npx @react-native-community/cli@latest init`. Expo is not supported yet.
 
-If you need to install it manually:
-
 ```bash
-npm install @masicn/ui
-# peer deps
-npm install react-native-reanimated react-native-safe-area-context react-native-worklets
+# This is the only install command you need:
+npx masicn@latest init
 ```
-
-**Peer dependencies:**
-- `react >= 18`
-- `react-native >= 0.73`
-- `react-native-reanimated >= 3`
-- `react-native-safe-area-context >= 4`
-- `react-native-worklets >= 0.1.0`
 
 ## Setup
 
@@ -257,6 +247,6 @@ See the [masicn CLI docs](https://www.npmjs.com/package/masicn) for the full wor
 
 ## License
 
-[MIT](./LICENSE) — free to use, modify, and distribute. Copyright © 2026 [Skipp](https://skipp.co.in).
+[MIT](./LICENSE) — free to use, modify, and distribute. Copyright © 2026 [Manish Kumar](https://manishh.in).
 
 When you copy components into your project with `masicn add`, those files become part of your project and are also MIT licensed — you can change them, ship them, or sell them without restriction.
