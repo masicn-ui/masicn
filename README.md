@@ -14,68 +14,112 @@ This package provides the design foundation that all masicn components are built
 
 ## Installation
 
-`@masicn/ui` is set up automatically when you run `npx masicn init`. You don't need to install it manually.
+`@masicn/ui` is set up automatically when you run `npx masicn@latest init`. You don't need to install it manually.
 
 > **Supported project type:** masicn currently works with **React Native CLI** projects only — scaffolded via `npx @react-native-community/cli@latest init`. Expo is not supported yet.
 
-If you need to install it yourself:
+If you need to install it manually:
 
 ```bash
 npm install @masicn/ui
 # peer deps
-npm install react-native-reanimated react-native-safe-area-context
+npm install react-native-reanimated react-native-safe-area-context react-native-worklets
 ```
 
 **Peer dependencies:**
 - `react >= 18`
 - `react-native >= 0.73`
-- `react-native-reanimated >= 3` *(optional)*
-- `react-native-safe-area-context >= 4` *(optional)*
+- `react-native-reanimated >= 3`
+- `react-native-safe-area-context >= 4`
+- `react-native-worklets >= 0.1.0`
 
 ## Setup
 
-Wrap your app with `MasicnProvider` and pass in a theme:
+Wrap your app with `MasicnProvider`:
 
 ```tsx
-import { MasicnProvider, createTheme } from '@masicn/ui';
-
-const theme = createTheme(); // uses masi palette defaults
+import { MasicnProvider } from '@masicn/ui';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function App() {
   return (
-    <MasicnProvider theme={theme}>
-      {/* your app */}
-    </MasicnProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <MasicnProvider>
+        {/* your app */}
+      </MasicnProvider>
+    </GestureHandlerRootView>
   );
 }
 ```
 
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `theme` | `'system' \| 'light' \| 'dark'` | `'system'` | Force a color mode or follow OS |
+| `palettes` | `PaletteEntry[]` | built-in palettes | Provide custom palettes for runtime switching |
+
 ## Theme
-
-### `createTheme(overrides?)`
-
-Creates a `{ light, dark }` theme pair. Accepts a deep partial override — only the keys you provide are changed, everything else stays default.
-
-```ts
-import { createTheme } from '@masicn/ui';
-
-const theme = createTheme({
-  colors: {
-    brand: { primary: '#FF6B00' }
-  }
-});
-```
 
 ### `useTheme()`
 
-Access the current theme and color mode inside any component:
+Access the current theme and controls inside any component:
 
 ```tsx
 import { useTheme } from '@masicn/ui';
 
-const { theme, colorMode } = useTheme();
-// theme.colors.brand.primary
-// colorMode: 'light' | 'dark'
+const {
+  theme,          // fully resolved Theme object for the current mode + palette
+  mode,           // 'light' | 'dark' | 'system'
+  setMode,        // (mode: 'light' | 'dark' | 'system') => void
+  toggleTheme,    // toggle between light and dark (ignores system pref)
+  resetToSystem,  // resume following the OS preference
+  palettes,       // PaletteEntry[] — all available palettes
+  activePalette,  // name of the currently active palette
+  setPalette,     // (name: string) => void — switch to a named palette
+} = useTheme();
+
+// use semantic color tokens — never raw hex
+const backgroundColor = theme.colors.background;
+const textColor = theme.colors.textPrimary;
+```
+
+### `createTheme(overrides?)`
+
+Creates a `{ light, dark }` theme pair. Accepts a deep partial override — only the keys you provide are changed, everything else stays from the base palette.
+
+```ts
+import { createTheme } from '@masicn/ui';
+
+const myTheme = createTheme({
+  light: {
+    colors: {
+      primary: '#6200ee',
+      onPrimary: '#ffffff',
+      background: '#f5f5f5',
+    },
+  },
+  dark: {
+    colors: {
+      primary: '#bb86fc',
+      onPrimary: '#000000',
+      background: '#121212',
+    },
+  },
+});
+// myTheme.light and myTheme.dark are fully resolved Theme objects
+```
+
+Pass the result to `MasicnProvider` via a `PaletteEntry`:
+
+```tsx
+const brandPalette: PaletteEntry = {
+  name: 'brand',
+  label: 'Brand',
+  pair: myTheme,
+};
+
+<MasicnProvider palettes={[brandPalette]}>
+  <App />
+</MasicnProvider>
 ```
 
 ### Built-in Palettes
@@ -94,11 +138,11 @@ const { theme, colorMode } = useTheme();
 | `amber` | Golden honey + espresso |
 | `nord` | Arctic blue-grays + frost |
 | `coffee` | Espresso browns + caramel |
-| `candy` | Hot pink + vivid sky blue — playful |
-| `citrus` | Lime green + golden yellow — fresh |
-| `grapeSoda` | Violet-purple + acid lime — loud |
-| `jade` | Deep emerald + warm gold — premium |
-| `neonTeal` | Electric teal + vivid violet — dark-native |
+| `candy` | Hot pink + vivid sky blue |
+| `citrus` | Lime green + golden yellow |
+| `grapeSoda` | Violet-purple + acid lime |
+| `jade` | Deep emerald + warm gold |
+| `neonTeal` | Electric teal + vivid violet |
 
 ## Tokens
 
@@ -107,93 +151,105 @@ Access raw design tokens via `useTokens()`:
 ```tsx
 import { useTokens } from '@masicn/ui';
 
-const tokens = useTokens();
-// tokens.spacing[4]
-// tokens.radius.md
-// tokens.typography.body
-// tokens.motion.duration.normal
+const { spacing, radius, borders, typography, motion, sizes, elevation, opacity, iconSizes } = useTokens();
+
+// spacing
+{ padding: spacing.md }           // 12
+{ gap: spacing.lg }               // 16
+// radius
+{ borderRadius: radius.md }       // 8
+{ borderRadius: radius.full }     // 9999
+// typography
+{ ...typography.body }            // fontFamily, fontSize, lineHeight
+// motion
+withSpring(1, motion.spring.snappy)
+withTiming(1, { duration: motion.duration.normal, easing: motionEasing.standard })
 ```
 
-| Token | Description |
-|-------|-------------|
-| `spacing` | Spacing scale |
+| Token group | Description |
+|-------------|-------------|
+| `spacing` | Spacing scale (4pt grid) |
 | `radius` | Border radius values |
-| `borders` | Border widths and styles |
-| `sizes` | Size presets |
-| `elevation` | Shadow/elevation levels |
+| `borders` | Border widths |
+| `sizes` | Touch targets, avatar sizes, icon sizes, min widths |
+| `elevation` | Shadow/elevation levels (apply inline — not inside `StyleSheet.create`) |
 | `opacity` | Opacity values |
 | `layout` | Layout constants |
 | `iconSizes` | Icon dimension presets |
 | `typography` | Font families, sizes, line heights |
-| `motion` | Animation durations and configs |
-| `motionEasing` | Easing functions |
+| `motion` | Spring presets + duration constants |
+| `motionEasing` | Easing functions (standard, accelerate, decelerate, linear) |
+| `gradients` | Gradient helpers (via `useGradients()`) |
 
 ## Primitives
 
-15 layout and base components. These are the building blocks all masicn components are composed from.
+15 layout and base components. All masicn components are built from these.
 
 ```tsx
-import { Box, Stack, Row, Text, Pressable, Surface } from '@masicn/ui';
+import { Box, Stack, Row, Text, Pressable, Surface, Icon } from '@masicn/ui';
 ```
 
 | Component | Description |
 |-----------|-------------|
 | `Box` | Base layout container |
-| `Text` | Text with typography token support |
-| `Stack` | Vertical flex layout |
-| `Row` | Horizontal flex layout |
+| `Text` | Typography with variant + color token support |
+| `Stack` | Vertical flex layout with gap |
+| `Row` | Horizontal flex layout with gap |
 | `Wrap` | Wrapping flex layout |
 | `Center` | Centered content |
 | `Spacer` | Flexible space filler |
 | `Divider` | Visual separator |
-| `Surface` | Themed surface with elevation |
-| `Pressable` | Interactive pressable with ripple |
+| `Surface` | Themed surface with optional elevation |
+| `Pressable` | Pressable with ripple and hit slop |
 | `AspectRatio` | Aspect ratio container |
 | `Circle` | Circular container |
 | `Square` | Square container |
 | `Screen` | Full-screen container |
 | `SafeAreaScreen` | Safe area aware screen |
+| `Icon` | SVG icon renderer |
 
 ## Hooks
 
 ```tsx
 import {
-  useTheme,
-  useTokens,
-  useReducedMotion,
-  useResponsive,
-  useAccessibilityProps,
-  useFocusTrap,
+  useTheme,              // current theme, mode controls, palette switching
+  useTokens,             // raw design tokens
+  useReducedMotion,      // boolean — true when OS prefers reduced motion
+  useResponsive,         // responsive breakpoints (Breakpoint, ResponsiveInfo)
+  useAccessibilityProps, // accessibility prop helpers
+  useFocusTrap,          // focus management for modals/dialogs
+  useGradients,          // gradient helpers derived from active theme
 } from '@masicn/ui';
 ```
-
-| Hook | Description |
-|------|-------------|
-| `useTheme()` | Current theme + color mode |
-| `useTokens()` | Raw design tokens |
-| `useReducedMotion()` | Respects `prefers-reduced-motion` |
-| `useResponsive()` | Responsive breakpoints (`Breakpoint`, `ResponsiveInfo`) |
-| `useAccessibilityProps()` | Accessibility prop helpers |
-| `useFocusTrap()` | Focus management for modals/dialogs |
 
 ## Utilities
 
 ```tsx
 import { rgba, clamp } from '@masicn/ui';
 
-rgba('#FF6B00', 0.5)   // → 'rgba(255, 107, 0, 0.5)'
-clamp(value, 0, 100)
+rgba('#FF6B00', 0.5)     // → 'rgba(255, 107, 0, 0.5)'
+clamp(value, 0, 100)     // clamp a number between min and max
+```
+
+## System
+
+```tsx
+import { MasicnProvider, Masicn, PortalHost } from '@masicn/ui';
+
+// Masicn — imperative portal (for toasts, overlays)
+Masicn.show(<Toast message="Saved!" />);
+Masicn.hide();
 ```
 
 ## Using with the masicn CLI
 
-`@masicn/ui` is designed to be used alongside the masicn CLI, not standalone. The CLI copies component source files into your project — those files import primitives and tokens from this package.
+`@masicn/ui` is designed to be used alongside the masicn CLI. The CLI copies component source files into your project — those files import primitives and tokens from this package.
 
 ```bash
 # Sets up @masicn/ui and copies the design system locally
 npx masicn init
 
-# Copies Button.tsx into your project (imports from @masicn/ui)
+# Copies Button.tsx into your project
 npx masicn add button
 ```
 
@@ -203,4 +259,4 @@ See the [masicn CLI docs](https://www.npmjs.com/package/masicn) for the full wor
 
 [MIT](./LICENSE) — free to use, modify, and distribute. Copyright © 2026 [Skipp](https://skipp.co.in).
 
-When you copy components into your project with `masicn add`, those files become part of your project and are also covered under the MIT license — you can change them, ship them, or sell them without restriction. The only requirement is that the original copyright notice is retained.
+When you copy components into your project with `masicn add`, those files become part of your project and are also MIT licensed — you can change them, ship them, or sell them without restriction.
