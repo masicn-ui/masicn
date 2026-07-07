@@ -173,7 +173,7 @@ withTiming(1, { duration: motion.duration.normal, easing: motionEasing.standard 
 
 ## Primitives
 
-15 layout and base components. All masicn components are built from these.
+16 layout and base components. All masicn components are built from these.
 
 ```tsx
 import { Box, Stack, Row, Text, Pressable, Surface, Icon } from '@masicn/ui';
@@ -197,6 +197,45 @@ import { Box, Stack, Row, Text, Pressable, Surface, Icon } from '@masicn/ui';
 | `Screen` | Full-screen container |
 | `SafeAreaScreen` | Safe area aware screen |
 | `Icon` | SVG icon renderer |
+
+## Icons
+
+20 SVG icon components (built on `react-native-svg`). Each accepts `IconProps` (`size`, `color`, `strokeWidth`) and can be sized/colored automatically via the `Icon` primitive.
+
+```tsx
+import { Icon, CheckIcon } from '@masicn/ui';
+
+<Icon icon={CheckIcon} size="action" color={theme.colors.success} />
+```
+
+| Icon | | Icon | |
+|------|---|------|---|
+| `SunIcon` | | `MoonIcon` | |
+| `SearchIcon` | | `CheckIcon` | |
+| `XIcon` | | `WarningIcon` | |
+| `InfoIcon` | | `ChevronUpIcon` | |
+| `ChevronDownIcon` | | `ChevronRightIcon` | |
+| `ArrowLeftIcon` | | `PlusIcon` | |
+| `MinusIcon` | | `StarIcon` | |
+| `InboxIcon` | | `PaletteIcon` | |
+| `SettingsIcon` | | `EyeIcon` | |
+| `EyeOffIcon` | | `PaintBoardIcon` | |
+
+## Theme Toggle
+
+`ThemeToggle` is a ready-made icon control that switches between light and dark mode on tap, with a guarded spin animation (respects `useReducedMotion()`).
+
+```tsx
+import { ThemeToggle } from '@masicn/ui';
+
+<ThemeToggle size={24} testID="theme-toggle" />
+```
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `size` | `number` | `20` | Icon size in pixels |
+| `style` | `ViewStyle` | — | Style applied to the animated icon wrapper |
+| `testID` | `string` | — | Test ID for the pressable |
 
 ## Hooks
 
