@@ -28,18 +28,20 @@ npm run typecheck      # TypeScript type check without emit
 ## Architecture — Layer Order (bottom to top)
 
 ```
-tokens/       → Raw values: spacing, radius, borders, sizes, elevation, iconSizes, opacity, layout, typography
-theme/        → Color palettes (masi, ocean, sunset, forest, mono, rose, midnight, amber, nord, coffee)
+tokens/       → Raw values: spacing, radius, borders, sizes, elevation, iconSizes, opacity, layout, typography, motion, motionEasing
+theme/        → 15 color palettes (masi, ocean, sunset, forest, mono, rose, midnight, amber, nord, coffee, candy, citrus, grapeSoda, jade, neonTeal)
               → ThemeProvider (Zustand-backed), StaticThemeProvider, createTheme(), useTheme()
-animation/    → motion (durations + 7 spring presets), motionEasing (Reanimated easing functions)
-primitives/   → Box, Stack, Row, Text, Spacer, Divider, Screen, SafeAreaScreen
+primitives/   → Box, Stack, Row, Text, Spacer, Divider, Screen, SafeAreaScreen, and 8 more (16 total, incl. Icon)
+icons/        → 20 SVG icon components built on react-native-svg
 hooks/        → useTheme, useTokens, useReducedMotion, useResponsive, useAccessibilityProps, useFocusTrap
 utils/        → rgba(), clamp(), platform helpers
-system/       → MasicnProvider, Masicn (portal), PortalHost
+system/       → MasicnProvider, Masicn (portal), PortalHost, ThemeToggle
 index.ts      → Single public API entry point
 ```
 
 **Strict rule**: lower layers must never import from higher layers. `tokens/` cannot import from `theme/`. `theme/` cannot import from `primitives/`.
+
+> **Note**: there is no top-level `animation/` source directory in this package — motion configs (`motion.ts`, `motionEasing.ts`) live under `tokens/`. The CLI does synthesize a separate `src/animation/` directory in *destination* projects (see `cli/`), which is a different thing from this repo's own layout.
 
 ## What Goes Here
 
@@ -66,6 +68,10 @@ index.ts      → Single public API entry point
 - `src/tokens/index.ts` — `MasiTokens` object aggregating all token namespaces
 - `src/theme/createTheme.ts` — factory function used by all palette themes
 - `src/system/MasicnProvider.tsx` — root provider that wraps every masicn app
+
+## Cleanup Candidates
+
+- `src/WelcomeScreen.tsx` is unexported (not part of `src/index.ts`) and undocumented — looks like leftover scaffolding. Flagging for maintainer review rather than deleting unilaterally.
 
 ## Build Output
 
