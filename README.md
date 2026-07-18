@@ -1,8 +1,8 @@
 # @masicn/ui
 
-Core design system for [masicn](https://github.com/masicn-ui) — the copy-paste React Native UI ecosystem.
+Core design system for [masicn/ui](https://github.com/masicn-ui) — the copy-paste React Native UI ecosystem.
 
-This package provides the design foundation that all masicn components are built on: tokens, theme system, primitives, hooks, and utilities. You don't use `@masicn/ui` directly to build UIs — you use the [masicn CLI](https://www.npmjs.com/package/masicn) to copy component source code into your project, and those components import from this package.
+This package provides the design foundation that all masicn/ui components are built on: tokens, theme system, primitives, hooks, and utilities. You don't use `@masicn/ui` directly to build UIs — you use the [masicn CLI](https://www.npmjs.com/package/masicn) to copy component source code into your project, and those components import from this package.
 
 [![npm version](https://img.shields.io/npm/v/@masicn/ui.svg?style=flat-square)](https://www.npmjs.com/package/@masicn/ui)
 [![npm downloads](https://img.shields.io/npm/dm/@masicn/ui.svg?style=flat-square)](https://www.npmjs.com/package/@masicn/ui)
@@ -10,13 +10,13 @@ This package provides the design foundation that all masicn components are built
 
 **Built from scratch by [Manish Kumar](https://manishh.in) ([@lordofthemind](https://github.com/lordofthemind))**
 
-> **मसि** (masi) means _ink_ in Sanskrit and several Indian languages. Just as ink is the medium for writing anything, masicn is the medium for building anything in React Native.
+> **मसि** (masi) means _ink_ in Sanskrit and several Indian languages. Just as ink is the medium for writing anything, masicn/ui is the medium for building anything in React Native.
 
 ## Installation
 
 `@masicn/ui` is set up automatically when you run `npx masicn@latest init`. **You do not install it manually** — the CLI copies the design system source files directly into your project under `src/masicn/`. Your components then import from that local copy, not from this npm package.
 
-> **Supported project type:** masicn currently works with **React Native CLI** projects only — scaffolded via `npx @react-native-community/cli@latest init`. Expo is not supported yet.
+> **Supported project type:** masicn/ui currently works with **React Native CLI** projects only — scaffolded via `npx @react-native-community/cli@latest init`. Expo is not supported yet.
 
 ```bash
 # This is the only install command you need:
@@ -173,7 +173,7 @@ withTiming(1, { duration: motion.duration.normal, easing: motionEasing.standard 
 
 ## Primitives
 
-16 layout and base components. All masicn components are built from these.
+16 layout and base components. All masicn/ui components are built from these.
 
 ```tsx
 import { Box, Stack, Row, Text, Pressable, Surface, Icon } from '@masicn/ui';
@@ -283,6 +283,12 @@ npx masicn add button
 ```
 
 See the [masicn CLI docs](https://www.npmjs.com/package/masicn) for the full workflow.
+
+## Contributing
+
+See [masicn.manishh.in/docs/contributing](https://masicn.manishh.in/docs/contributing) for the
+full model. Fixes to tokens, theme, primitives, or hooks in this package PR directly against this
+repo.
 
 ## License
 
