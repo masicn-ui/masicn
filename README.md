@@ -286,7 +286,7 @@ See the [masicn CLI docs](https://www.npmjs.com/package/masicn) for the full wor
 
 ## Contributing
 
-See [masicn.manishh.in/docs/contributing](https://masicn.manishh.in/docs/contributing) for the
+See [masicn.manishh.in/contributing](https://masicn.manishh.in/contributing) for the
 full model. Fixes to tokens, theme, primitives, or hooks in this package PR directly against this
 repo.
 
