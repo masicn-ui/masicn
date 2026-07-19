@@ -73,7 +73,7 @@ export const motion = {
       damping: 28,
       stiffness: 200,
     },
-    /** Bottom/side sheets — ζ ≈ 0.90, crisp settle. */
+    /** Bottom/side sheets — ζ ≈ 0.81, crisp settle. */
     sheet: {
       damping: 25,
       stiffness: 300,
@@ -90,12 +90,12 @@ export const motion = {
       damping: 28,
       stiffness: 260,
     },
-    /** Checkbox / toggle check mark pop — ζ ≈ 0.50, intentionally bouncy. */
+    /** Checkbox / toggle check mark pop — ζ ≈ 0.42, intentionally bouncy. */
     check: {
       damping: 12,
       stiffness: 200,
     },
-    /** Radio indicator dot — ζ ≈ 0.91, crisp settle. */
+    /** Radio indicator dot — ζ ≈ 0.58, snappy with a slight bounce. */
     indicator: {
       damping: 20,
       stiffness: 300,
